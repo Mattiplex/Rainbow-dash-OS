@@ -1,0 +1,8 @@
+ <body> <H1>Welcome to Rainbow Dash OS</H1>
+<p> this is a test page for rainbow dash os. </p>
+<p> this is my first time coding a website. but i am excited to see how far i can go with this. </p>
+ <p> expect more things to come in the future </p>
+<img src="https://i.pinimg.com/originals/bc/0b/1f/bc0b1f9a5c0af914aaf13bb20761a0f1.jpg" alt="Rainbow Dash" />
+<a href="https://www.youtube.com/watch?v=fyYVBZfjNrE/">cute vid i found</a>
+<button onclick="window.location.href='https://www.instagram.com/matthewwong219/'">follow my social media</button>
+ </body>
