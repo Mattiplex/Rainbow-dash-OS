@@ -1,0 +1,109 @@
+#welcomescreen {
+  position: absolute;
+  z-index: 9;
+  background-image:url(https://i.pinimg.com/originals/51/dc/4b/51dc4be3e21778576cded73ba31f9768.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+  padding: 10px;
+  border-radius: 20px;
+  width:450px;
+  height: 800px;
+}
+
+#welcomescreenheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+   font-family: 'gorditas',sans-serif;
+   font-size: 40px;
+}
+
+#welcomediv {
+  background-color:rgba(40,159,208,0.85);
+  width:fit-content;
+  border-radius:20px;
+  max-width: 450px ; 
+  max-width: 600px ;
+  padding:5px ; 
+}
+
+#welcometext {
+color:rgba(230,101,54,0.85);
+font-family:'gorditas',sans-serif;
+font-size: larger;
+word-break: normal ;
+}
+
+#header { 
+  display: flex; 
+  justify-content: flex-start ;
+  backdrop-filter: blur 20px ;
+  background-color: rgba(230,101,54,0.85);
+  backdrop-filter:brightness(3) ;
+  border-radius: 20px ;
+}
+
+#OSname {
+  margin-left: 130px;
+  background-color: rgba(135,206,250,0.9) ;
+  border-radius:20px ;
+  padding: 5px;
+  font-family:'gorditas', sans-serif;
+}
+
+#timerstyle {
+ background-color: rgba(135,206,250,0.9);
+ border-radius: 20px;
+margin-left: 16px ;
+padding: 6px ; 
+font-family:'gorditas', sans-serif;
+}
+
+.timeElement {
+   background-color: rgba(135,206,250,0.9);
+   border-radius: 20px;
+    margin-left: 16px ;
+     padding: 6px ;
+      font-family:'gorditas', sans-serif;
+}
+
+.buttonvid {
+background-color: lightskyblue ;
+border-radius: 40px ;
+width:fit-content;
+font-family:'gorditas',sans-serif; 
+}
+
+.buttonmed {
+background-color: lightskyblue ;
+border-radius: 40px ;
+width:fit-content;
+font-family:'gorditas',sans-serif;
+margin-left: 5px;
+}
+
+.quote {
+ padding: 5px ;
+ background-color: lightskyblue;
+ border-radius: 20px ; 
+ font-family:'gorditas',sans-serif;
+ margin-left: 30px
+}
+
+.sunglass {
+ height:79px;
+ width:80px;
+ position:absolute;
+ top:10px;
+ left: 650px
+}
+
+.runningGIF {
+ height: 120px;
+ width: 120px ;
+ position:absolute;
+ top: -30px ;
+ left:16px;
+}
