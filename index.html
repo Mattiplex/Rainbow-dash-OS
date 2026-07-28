@@ -1,19 +1,30 @@
-<body style="background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/e1ac3e92-954f-4f99-b9ad-f603c3af5bc4/d6k5tr1-abe81b8d-0631-494e-81ad-9a89ae826a72.png);background-size:cover;background-color: skyblue;"> 
-<div style="display: flex; justify-content: flex-start ;backdrop-filter: blur 20px ; background-color: rgba(230,101,54,0.85);backdrop-filter:brightness(3.0) ; border-radius: 20px ;"> 
-<h2 style="margin-left: 130px;background-color: rgba(135,206,250,0.9) ; border-radius:20px ;padding: 5px;font-family:Arial, Helvetica, sans-serif">RainbowDashOS</h2> 
-<h2 id="timeElement" style="background-color: rgba(135,206,250,0.9);border-radius: 20px; margin-left: 16px ; padding: 6px ; font-family:Arial,Helvetica, sans-serif;"> </h2>  </div>
-<div style=" width: fit-content; position:absolute; top: 120px ; left: 10px "> 
-<p style="margin-top: -1px; padding: 5px ; background-color:rgba(222,45,68,0.85) ;backdrop-filter:brightness(3.0);border-radius:20px ; font-family:Arial, Helvetica, sans-serif"> welcome,this is a test page for rainbow dash os. </p>
-<p style="margin-top: -16px ; padding: 5px ; background-color:rgba(230,101,54,0.85) ;backdrop-filter:brightness(3.0);border-radius:20px; font-family: Arial, Helvetica, sans-serif"> this is my first time coding a website. </p> 
-<p style="margin-top: -16px ; padding: 5px ; background-color:rgba(251,249,177,0.85) ;backdrop-filter:brightness(3.0);border-radius:20px; font-family:Arial, Helvetica, sans-serif">but i am excited to see how far i can go with this. </p>
- <p style="margin-top: -16px ; padding: 5px ; background-color:rgba(104,203,79,0.85) ;backdrop-filter:brightness(3.0);border-radius:20px; font-family:Arial, Helvetica, sans-serif" > expect more things to come in the future </p>
- <p style="margin-top: -16px ; padding: 5px ; background-color:rgba(40,159,208,0.85)  ;backdrop-filter:brightness(3.0);border-radius:20px; font-family:Arial, Helvetica, sans-serif"> for my friends , yes horses are rad</p>
- <p style="margin-top: -16px ; padding: 5px ; background-color:rgba(96,34,133,0.85) ;backdrop-filter:brightness(3.0);border-radius:20px; font-family: Arial, Helvetica, sans-serif;"> creator, Matthewwong12 </p> </div>
-<div style="width:fit-content;position:absolute; top:280px ;left:20px"><h2 style="padding: 5px ; background-color:rgba(230,101,54,0.85);backdrop-filter:brightness(3.0);border-radius: 20px ;"> this site needs to be 20% cooler</h2></div>
-<script>function updatetime() {var currentTime= new Date().toLocaleString(); var timetext = document.querySelector ('#timeElement') ; timetext.innerHTML = currentTime;
-console.log(currentTime);} setInterval(updatetime,1000) ;</script> 
-<button style="position:absolute;top: 350px; left: 20px; background-color: lightskyblue ;border-radius: 40px  " onclick="window.location.href='https://www.youtube.com/watch?v=fyYVBZfjNrE/'"> <h3>Cute Vid I Found</h3> </button>
-<button style="position:absolute;top: 350px;left: 170px; background-color: lightskyblue; border-radius: 40px   "  onclick="window.location.href='https://www.instagram.com/matthewwong219/'"> <h3>Follow my social media</h3> </button> 
-<img style="height:79px;width:80px; position:absolute; top:10px; left: 600px" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/d0fc0c90-5b89-4871-97de-57cf3422d2f0/d4d0spq-f2e85335-84dc-48fe-8b35-dafc517e9f12.png" alt="rainbow dash with sunglasses" >
-<img src="https://i.pinimg.com/originals/10/b7/d4/10b7d409056fb5ebadf13eb20ddf7d87.gif" alt="rainbow dash running gif" style="height: 120px; width: 120px ; position:absolute;top: -30px ; left:16px">
+<body style="background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/e1ac3e92-954f-4f99-b9ad-f603c3af5bc4/d6k5tr1-abe81b8d-0631-494e-81ad-9a89ae826a72.png);background-size:cover;background-repeat: no-repeat;"> 
+<link rel="stylesheet" href="style.css" >
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&display=swap" rel="stylesheet">
+<script src="script.js"> </script> 
+<div id="welcomescreen">
+  <p style="cursor: pointer;" id="welcomeopen"> open</p>
+  <p style="cursor: pointer;" id="welcomeclose"> close</p>
+  <div id="welcomescreenheader">RAINBOW DASH OS</div>
+  <div id="welcomediv">
+   <p id="welcometext"> welcome,this is a test page for rainbow dash OS, this is my first time coding a website. 
+    but i am excited to see how far i can go with this.expect more things to come in the future expect more things
+     to come in the future creator, Matthewwong12 </p> 
+  </div>
+  <div style="width:fit-content;"> 
+    <h2 id="quote"> this site needs to be 20% cooler</h2>
+ </div>  
+<button class="buttonvid" onclick="window.location.href='https://www.youtube.com/watch?v=fyYVBZfjNrE/'">
+   <h4>Cute Vid I Found</h4> </button>
+<button class="buttonmed"  onclick="window.location.href='https://www.instagram.com/matthewwong219/'">
+   <h4>Follow my social media</h4> </button>
+</div>
+  <div id="header"> 
+<h2 id="OSname">RainbowDashOS</h2> 
+<h2 id="timeElement" class="timeElement"> </h2>  </div>
+<img class="sunglass" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/d0fc0c90-5b89-4871-97de-57cf3422d2f0/d4d0spq-f2e85335-84dc-48fe-8b35-dafc517e9f12.png" alt="rainbow dash with sunglasses" >
+<img class="runningGIF" src="https://i.pinimg.com/originals/10/b7/d4/10b7d409056fb5ebadf13eb20ddf7d87.gif" alt="rainbow dash running gif" >
+
 </body>
