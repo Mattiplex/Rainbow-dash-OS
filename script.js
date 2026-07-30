@@ -60,6 +60,7 @@ function closeWindow(elmnt) {
 }
 function openWindow(elmnt) { 
 elmnt.style.display = "flex";
+elmnt.style.justify-content = "flex-start"
 biggestIndex++; //Increment biggestIndex by 1 
 elmnt.style.zIndex = biggestIndex;
 topbar.style.zIndex = biggestIndex +1;
