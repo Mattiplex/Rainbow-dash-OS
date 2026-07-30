@@ -50,24 +50,25 @@ function dragElement(elmnt) {
   }
 }
 
-var welcomescreen = document.querySelector("#welcomescreen")
-var welcomescreen = document.queryselector("#welcomeclose")
-var welcomescreen = document.queryselector("#welcomeopen")
+var welcomeScreen = document.querySelector("#welcomescreen")
+var welcomeScreenClose = document.querySelector("#welcomeclose")
+var welcomeScreenOpen = document.querySelector("#welcomeopen")
+var topBar = document.querySelector("#top")
+
 function closeWindow(elmnt) {
-  elmnt.style.display = "none"
+  elmnt.style.display = "none";
 }
 function openWindow(elmnt) { 
-elmnt.style.display = "flex"
+elmnt.style.display = "flex";
 biggestIndex++; //Increment biggestIndex by 1 
 elmnt.style.zIndex = biggestIndex;
-topBar.style.zIndex = biggest +1;
-elmnt.style.top = elmnt.style.left
+topbar.style.zIndex = biggestIndex +1;
 }
 
-welcomeScreenclose.addEventListener("click",function() {
+welcomeScreenClose.addEventListener("click",function() {
  closeWindow(welcomeScreen);
 });
-welcomeScreenopen.addEventListener("click",function() {
+welcomeScreenOpen.addEventListener("click",function() {
  openWindow(welcomeScreen);
 });
 
