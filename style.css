@@ -101,7 +101,8 @@ padding: 5px ;
  width:80px;
  position:absolute;
  top:10px;
- left: 650px
+ left: 650px;
+ z-index: 9;
 }
 
 .runningGIF {
