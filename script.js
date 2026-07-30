@@ -50,9 +50,9 @@ function dragElement(elmnt) {
   }
 }
 
-var welcomescreen = document.querySelector("welcomescreen")
-var welcomescreen = document.queryselector("welcomeclose")
-var welcomescreen = document.queryselector("welcomeopen")
+var welcomescreen = document.querySelector("#welcomescreen")
+var welcomescreen = document.queryselector("#welcomeclose")
+var welcomescreen = document.queryselector("#welcomeopen")
 function closeWindow(elmnt) {
   elmnt.style.display = "none"
 }
