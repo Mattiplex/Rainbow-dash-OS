@@ -59,8 +59,7 @@ function closeWindow(elmnt) {
   elmnt.style.display = "none";
 }
 function openWindow(elmnt) { 
-elmnt.style.display = "flex";
-elmnt.style.justify-content = "flex-start"
+elmnt.style.display = "break";
 biggestIndex++; //Increment biggestIndex by 1 
 elmnt.style.zIndex = biggestIndex;
 topbar.style.zIndex = biggestIndex +1;
