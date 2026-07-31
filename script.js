@@ -54,6 +54,7 @@ var welcomeScreen = document.querySelector("#welcomescreen")
 var welcomeScreenClose = document.querySelector("#welcomeclose")
 var welcomeScreenOpen = document.querySelector("#welcomeopen")
 var topBar = document.querySelector("#top")
+var biggestIndex = 1
 
 function closeWindow(elmnt) {
   elmnt.style.display = "none";
