@@ -100,8 +100,8 @@ padding: 5px ;
  height:79px;
  width:80px;
  position:absolute;
- top:10px;
- left: 650px;
+ top: -30px ;
+ left:16px;
  z-index: 9;
  cursor: pointer;
 }
@@ -110,6 +110,13 @@ padding: 5px ;
  height: 120px;
  width: 120px ;
  position:absolute;
- top: -30px ;
- left:16px;
+ top:10px;
+ left: 650px;
+}
+
+.closewindow {
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+  
 }
