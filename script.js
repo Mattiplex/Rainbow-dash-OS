@@ -62,7 +62,7 @@ function openWindow(elmnt) {
 elmnt.style.display = "break";
 biggestIndex++; //Increment biggestIndex by 1 
 elmnt.style.zIndex = biggestIndex;
-topbar.style.zIndex = biggestIndex +1;
+topBar.style.zIndex = biggestIndex +1;
 }
 
 welcomeScreenClose.addEventListener("click",function() {
