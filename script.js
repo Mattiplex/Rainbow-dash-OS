@@ -59,7 +59,7 @@ function closeWindow(elmnt) {
   elmnt.style.display = "none";
 }
 function openWindow(elmnt) { 
-elmnt.style.display = "break";
+elmnt.style.display = "block";
 biggestIndex++; //Increment biggestIndex by 1 
 elmnt.style.zIndex = biggestIndex;
 topBar.style.zIndex = biggestIndex +1;
