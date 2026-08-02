@@ -73,20 +73,20 @@ welcomeScreenOpen.addEventListener("click",function() {
  openWindow(welcomeScreen);
 });
 
-var selectedIcon = null;
+var selectedIcon = undefined ;
 
 function selectIcon(elmnt) {
-  elmnt.classList.add("notesIcon");
+  elmnt.classList.add('selected');
   selectedIcon = elmnt; 
 } 
 
 function deselectIcon(elmnt) {
-  elmnt.classList.remove("notesIcon");
-  selectedIcon = null; 
+  elmnt.classList.remove('selected');
+  selectedIcon = undefined ; 
 }
 
 function handleIconTap(elmnt) {
-  if (elmnt.classList.contains("notesIcon")) {
+  if (elmnt.classList.contains('selected')) {
    deselectIcon(elmnt);
    openWindow(window); 
   } else {
@@ -94,11 +94,11 @@ function handleIconTap(elmnt) {
   }
 }
 
-dragElement(document.querySelector("#noteswindow"))
+dragElement(document.getElementById("noteswindow"))
 
-var noteswindow = document.querySelector("#noteswindow");
-var notesopen = document.querySelector("#notesopen");
-var notesclose = document.querySelector("#notesclose");
+var noteswindow = document.querySelector("noteswindow");
+var notesopen = document.querySelector("notesopen");
+var notesclose = document.querySelector("notesclose");
 
 notesopen.addEventListener("click",function(){
   openwindow(noteswindow);
