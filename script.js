@@ -76,19 +76,19 @@ welcomeScreenOpen.addEventListener("click",function() {
 var selectedIcon = undefined ;
 
 function selectIcon(elmnt) {
-  elmnt.classList.add('selected');
+  elmnt.classList.add("selected");
   selectedIcon = elmnt; 
 } 
 
 function deselectIcon(elmnt) {
-  elmnt.classList.remove('selected');
+  elmnt.classList.remove("selected");
   selectedIcon = undefined ; 
 }
 
 function handleIconTap(elmnt) {
-  if (elmnt.classList.contains('selected')) {
+  if (elmnt.classList.contains("selected")) {
    deselectIcon(elmnt);
-   openWindow(window); 
+   openwindow(window); 
   } else {
     selectIcon(elmnt);
   }
@@ -96,9 +96,9 @@ function handleIconTap(elmnt) {
 
 dragElement(document.getElementById("noteswindow"))
 
-var noteswindow = document.querySelector("noteswindow");
-var notesopen = document.querySelector("notesopen");
-var notesclose = document.querySelector("notesclose");
+var noteswindow = document.querySelector("#noteswindow");
+var notesopen = document.querySelector("#notesopen");
+var notesclose = document.querySelector("#notesclose");
 
 notesopen.addEventListener("click",function(){
   openwindow(noteswindow);
