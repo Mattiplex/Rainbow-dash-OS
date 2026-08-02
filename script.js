@@ -94,6 +94,19 @@ function handleIconTap(elmnt) {
   }
 }
 
+dragElement(document.QuerySelector("#noteswindow"))
+
+var noteswindow = document.querySelector("#noteswindow");
+var notesOpen = document.querySelector("#notesopen");
+var notesClose = document.querySelector("#notesclose");
+
+notesOpen.addEventListener("click",function(){
+  openWindow(notesWindow);
+})
+
+notesClose.addEventListener("click",function(){
+  closeWindow(notesWindow);
+})
 
 // <![CDATA[
 var speed=100; // speed colours change, 1 second = 1000

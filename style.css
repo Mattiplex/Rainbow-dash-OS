@@ -131,9 +131,34 @@ padding: 5px ;
 .twilghtnotes {
   width:80px ;
   height:80px;
+  cursor: pointer;
 }
 
 .noteswording {
 font-family:'gorditas',sans-serif;
 color:rgba(199,157,215);
+}
+
+.noteswindow {
+background-image:url(https://i.pinimg.com/originals/3d/82/f0/3d82f0cf6ed646bc996c01c4a898bb22.jpg);
+width:400px;
+height:400px;
+
+}
+
+.notesheader {
+  background-image:url(); 
+  background-color:violet;
+  text-align:center;
+  font-family:'gorditas',sans-serif;
+  font-size:30px ;
+  border-radius:20px;
+  border: 2px solid rgba(135,206,250);
+}
+
+.notescontent {
+  background-image:url();
+  background-color:rgba(199,157,215);
+  border-radius:20px;
+  width:fit-content;
 }
