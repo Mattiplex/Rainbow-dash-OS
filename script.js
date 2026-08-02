@@ -94,7 +94,7 @@ function handleIconTap(elmnt) {
   }
 }
 
-dragElement(document.QuerySelector("#noteswindow"))
+dragElement(document.querySelector("#noteswindow"))
 
 var noteswindow = document.querySelector("#noteswindow");
 var notesOpen = document.querySelector("#notesopen");
