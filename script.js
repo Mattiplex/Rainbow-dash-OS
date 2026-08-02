@@ -73,21 +73,21 @@ welcomeScreenOpen.addEventListener("click",function() {
  openWindow(welcomeScreen);
 });
 
-var selectedIcon = undefined;
+var selectedIcon = null;
 
-function selectedIcon(elmnt) {
+function selectIcon(elmnt) {
   elmnt.classList.add("notesIcon");
   selectedIcon = elmnt; 
 } 
 
 function deselectIcon(elmnt) {
   elmnt.classList.remove("notesIcon");
-  selectedIcon = undefined; 
+  selectedIcon = null; 
 }
 
 function handleIconTap(elmnt) {
   if (elmnt.classList.contains("notesIcon")) {
-   deslectIcon(elmnt);
+   deselectIcon(elmnt);
    openWindow(window); 
   } else {
     selectIcon(elmnt);
@@ -101,11 +101,11 @@ var notesopen = document.querySelector("#notesopen");
 var notesclose = document.querySelector("#notesclose");
 
 notesopen.addEventListener("click",function(){
-  openWindow(notesWindow);
+  openwindow(noteswindow);
 })
 
 notesclose.addEventListener("click",function(){
-  closeWindow(notesWindow);
+  closewindow(noteswindow);
 })
 
 // <![CDATA[
