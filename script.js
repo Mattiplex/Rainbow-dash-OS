@@ -97,14 +97,14 @@ function handleIconTap(elmnt) {
 dragElement(document.querySelector("#noteswindow"))
 
 var noteswindow = document.querySelector("#noteswindow");
-var notesOpen = document.querySelector("#notesopen");
-var notesClose = document.querySelector("#notesclose");
+var notesopen = document.querySelector("#notesopen");
+var notesclose = document.querySelector("#notesclose");
 
-notesOpen.addEventListener("click",function(){
+notesopen.addEventListener("click",function(){
   openWindow(notesWindow);
 })
 
-notesClose.addEventListener("click",function(){
+notesclose.addEventListener("click",function(){
   closeWindow(notesWindow);
 })
 
