@@ -88,7 +88,7 @@ function deselectIcon(elmnt) {
 function handleIconTap(elmnt) {
   if (elmnt.classList.contains("selected")) {
    deselectIcon(elmnt);
-   openWindow(noteswindow); 
+   openWindow(window); 
   } else {
     selectIcon(elmnt);
   }
@@ -98,10 +98,22 @@ dragElement(document.getElementById("noteswindow"))
 
 var noteswindow = document.querySelector("#noteswindow")
 var notesclose = document.querySelector("#notesclose")
+var notesopen = document.querySelector("#notesopen")
+
+notesopen.addEventListener("click",function(){
+  openWindow(notesWindow);
+})
 
 notesclose.addEventListener("click",function(){
   closeWindow(noteswindow);
 })
+
+function addwindowTapHandling(elmnt) {
+  elmnt.addEventListener("mousedown",() => handleWindowTap(elmnt))
+}
+
+addwindowTapHandling(document.getElementById("header"))
+
 
 // <![CDATA[
 var speed=100; // speed colours change, 1 second = 1000
