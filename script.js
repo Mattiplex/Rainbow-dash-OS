@@ -94,10 +94,10 @@ function handleIconTap(elmnt) {
   }
 }
 
-dragElement(document.getElementById("#noteswindow"));
+dragElement(document.getElementById("#noteswindow"))
 
-var noteswindow = document.querySelector("#noteswindow");
-var notesclose = document.querySelector("#notesclose");
+var noteswindow = document.querySelector("#noteswindow")
+var notesclose = document.querySelector("#notesclose")
 
 notesclose.addEventListener("click",function(){
   closeWindow(noteswindow);
