@@ -94,18 +94,18 @@ function handleIconTap(elmnt) {
   }
 }
 
-dragElement(document.getElementById("noteswindow"))
+dragElement(document.getElementById("noteswindow"));
 
 var noteswindow = document.querySelector("#noteswindow");
 var notesopen = document.querySelector("#notesopen");
 var notesclose = document.querySelector("#notesclose");
 
 notesopen.addEventListener("click",function(){
-  openwindow(noteswindow);
+  openWindow(noteswindow);
 })
 
 notesclose.addEventListener("click",function(){
-  closewindow(noteswindow);
+  closeWindow(noteswindow);
 })
 
 // <![CDATA[
