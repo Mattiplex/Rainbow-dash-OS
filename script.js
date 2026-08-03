@@ -88,21 +88,16 @@ function deselectIcon(elmnt) {
 function handleIconTap(elmnt) {
   if (elmnt.classList.contains("selected")) {
    deselectIcon(elmnt);
-   openwindow(window); 
+   openWindow(noteswindow); 
   } else {
     selectIcon(elmnt);
   }
 }
 
-dragElement(document.getElementById("noteswindow"));
+dragElement(document.getElementById("#noteswindow"));
 
 var noteswindow = document.querySelector("#noteswindow");
-var notesopen = document.querySelector("#notesopen");
 var notesclose = document.querySelector("#notesclose");
-
-notesopen.addEventListener("click",function(){
-  openWindow(noteswindow);
-})
 
 notesclose.addEventListener("click",function(){
   closeWindow(noteswindow);
