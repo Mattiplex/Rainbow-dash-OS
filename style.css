@@ -124,26 +124,34 @@ padding: 5px ;
 
 .notesIcon {
   text-align:center;
-  width: fit content;
-  padding: 1px 
+  width: 120px;
+  height: 105px;
+  padding: 5px ;
+  border-radius:20px;
+  background-color:rgba(60,9,108,0.85);
+  margin-top:5px;
+
 }
 
 .twilghtnotes {
   width:80px ;
-  height:80px;
+  height:85px;
   cursor: pointer;
 }
 
 .noteswording {
 font-family:'gorditas',sans-serif;
 color:rgba(199,157,215);
+margin-top:1px;
 }
 
 .noteswindow {
 background-image:url(https://i.pinimg.com/originals/3d/82/f0/3d82f0cf6ed646bc996c01c4a898bb22.jpg);
-width:400px;
-height:400px;
-
+background-size: cover;
+width:500px;
+height:700px;
+border-radius:20px;
+padding:10px;
 }
 
 .notesheader {
