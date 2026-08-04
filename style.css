@@ -145,7 +145,7 @@ color:rgba(199,157,215);
 margin-top:1px;
 }
 
-.noteswindow {
+#noteswindow {
 background-image:url(https://i.pinimg.com/originals/3d/82/f0/3d82f0cf6ed646bc996c01c4a898bb22.jpg);
 background-size: cover;
 width:500px;
@@ -153,6 +153,7 @@ height:700px;
 border-radius:20px;
 padding:10px;
 position:absolute;
+z-index:9;
 }
 
 .notesheader {
