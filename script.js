@@ -101,7 +101,7 @@ var notesclose = document.querySelector("#notesclose")
 var notesopen = document.querySelector("#notesopen")
 
 notesopen.addEventListener("click",function(){
-  openWindow(notesWindow);
+  openWindow(noteswindow);
 })
 
 notesclose.addEventListener("click",function(){
