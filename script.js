@@ -88,7 +88,7 @@ function deselectIcon(elmnt) {
 function handleIconTap(elmnt) {
   if (elmnt.classList.contains("selected")) {
    deselectIcon(elmnt);
-   openWindow(window); 
+   openWindow(noteswindow); 
   } else {
     selectIcon(elmnt);
   }
