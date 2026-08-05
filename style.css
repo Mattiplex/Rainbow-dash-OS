@@ -154,6 +154,7 @@ border-radius:20px;
 padding:10px;
 position:absolute;
 z-index:9;
+display:none;
 }
 
 .notesheader {
@@ -164,6 +165,7 @@ z-index:9;
   font-size:30px ;
   border-radius:20px;
   border: 2px solid rgba(135,206,250);
+  cursor:move;
 }
 
 .notescontent {

@@ -8,6 +8,8 @@ function updatetime() {
 setInterval(updatetime, 1000); 
 
 dragElement(document.getElementById("welcomescreen"));
+dragElement(document.getElementById("noteswindow"));
+
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -94,7 +96,6 @@ function handleIconTap(elmnt) {
   }
 }
 
-dragElement(document.getElementById("noteswindow"))
 
 var noteswindow = document.querySelector("#noteswindow")
 var notesclose = document.querySelector("#notesclose")
@@ -113,6 +114,22 @@ function addwindowTapHandling(elmnt) {
 }
 
 addwindowTapHandling(document.getElementById("header"))
+
+function handleWindowTap(elmnt) {
+  biggestIndex++; // Increment biggestIndex by 1
+  elmnt.style.zIndex = biggestIndex;
+  topbar.style.zIndex = biggestIndex +1;
+  deselectIcon(selectedIcon);
+}
+
+function openWindow(elmnt) {
+  elmnt.style.display = "flex";
+  biggestIndex++; // Increment biggestIndex by 1 
+  elmnt.style.zIndex = biggestIndex;
+  topbar.style.zIndex = biggestIndex +1;
+}
+
+
 
 
 // <![CDATA[
