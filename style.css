@@ -155,6 +155,7 @@ padding:10px;
 position:absolute;
 z-index:9;
 display:none;
+flex-direction:column;
 }
 
 .notesheader {
