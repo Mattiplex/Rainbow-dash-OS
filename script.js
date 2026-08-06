@@ -118,7 +118,7 @@ addwindowTapHandling(document.getElementById("header"))
 function handleWindowTap(elmnt) {
   biggestIndex++; // Increment biggestIndex by 1
   elmnt.style.zIndex = biggestIndex;
-  topbar.style.zIndex = biggestIndex +1;
+  topBar.style.zIndex = biggestIndex +1;
   deselectIcon(selectedIcon);
 }
 
@@ -126,11 +126,16 @@ function openWindow(elmnt) {
   elmnt.style.display = "flex";
   biggestIndex++; // Increment biggestIndex by 1 
   elmnt.style.zIndex = biggestIndex;
-  topbar.style.zIndex = biggestIndex +1;
+  topBar.style.zIndex = biggestIndex +1;
 }
 
-
-
+function initializeWindow(noteswindow) {
+  var screen =document.querySelector("#" + elmntName)
+  addwindowTapHandling(screen);
+  makeClosable(elmntName);
+  dragElement(screen);
+  
+}
 
 // <![CDATA[
 var speed=100; // speed colours change, 1 second = 1000
