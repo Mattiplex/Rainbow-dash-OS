@@ -62,7 +62,7 @@ function closeWindow(elmnt) {
   elmnt.style.display = "none";
 }
 function openWindow(elmnt) { 
-elmnt.style.display = "block";
+elmnt.style.display = "flex";
 biggestIndex++; //Increment biggestIndex by 1 
 elmnt.style.zIndex = biggestIndex;
 topBar.style.zIndex = biggestIndex +1;
@@ -75,6 +75,19 @@ welcomeScreenOpen.addEventListener("click",function() {
  openWindow(welcomeScreen);
 });
 
+var noteswindow = document.querySelector("#noteswindow")
+var notesclose = document.querySelector("#notesclose")
+var notesopen = document.querySelector("#notesopen")
+
+notesopen.addEventListener("click",function(){
+  openWindow(noteswindow);
+})
+
+notesclose.addEventListener("click",function(){
+  closeWindow(noteswindow);
+})
+
+
 var selectedIcon = undefined ;
 
 function selectIcon(elmnt) {
@@ -83,6 +96,9 @@ function selectIcon(elmnt) {
 } 
 
 function deselectIcon(elmnt) {
+  if (!elmnt) {
+    return;
+  }
   elmnt.classList.remove("selected");
   selectedIcon = undefined ; 
 }
@@ -95,19 +111,6 @@ function handleIconTap(elmnt) {
     selectIcon(elmnt);
   }
 }
-
-
-var noteswindow = document.querySelector("#noteswindow")
-var notesclose = document.querySelector("#notesclose")
-var notesopen = document.querySelector("#notesopen")
-
-notesopen.addEventListener("click",function(){
-  openWindow(noteswindow);
-})
-
-notesclose.addEventListener("click",function(){
-  closeWindow(noteswindow);
-})
 
 function addwindowTapHandling(elmnt) {
   elmnt.addEventListener("mousedown",() => handleWindowTap(elmnt))
@@ -123,6 +126,9 @@ function handleWindowTap(elmnt) {
 }
 
 function openWindow(elmnt) {
+  if (!elmnt) {
+    return;
+  }
   elmnt.style.display = "flex";
   biggestIndex++; // Increment biggestIndex by 1 
   elmnt.style.zIndex = biggestIndex;
