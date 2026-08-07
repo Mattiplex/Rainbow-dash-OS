@@ -174,4 +174,21 @@ flex-direction:column;
   background-color:rgba(199,157,215);
   border-radius:20px;
   width:fit-content;
+  height:fit-content;
+}
+
+.notescontentbotbar {
+  background-image:url();
+  background-color:violet;
+  border-radius:20px;
+  position:absolute;
+  align-items:bottom;
+  text-align:center;
+}
+
+.addnotes {
+  border-radius:20px;
+  background-color:rgba(60,9,108,0.85);
+  font-family:'gorditas',sans-serif;
+  cursor:pointer;
 }
