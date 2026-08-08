@@ -10,6 +10,7 @@
   border-radius: 20px;
   width:450px;
   height: 800px;
+  flex-direction:column;
 }
 
 #welcomescreenheader {
@@ -37,7 +38,7 @@ font-size: larger;
 word-break: normal ;
 }
 
-#header { 
+.header { 
   display: flex; 
   justify-content: flex-start ;
   backdrop-filter: blur 20px ;
