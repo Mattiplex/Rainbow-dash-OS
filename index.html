@@ -20,10 +20,10 @@
 <button class="buttonmed"  onclick="window.location.href='https://www.instagram.com/matthewwong219/'">
    <h4>Follow my social media</h4> </button>
 </div>
-  <div id="header"> 
+  <div id="top" class="header"> 
 <h2 id="OSname">RainbowDashOS</h2> 
 <h2 id="timeElement" class="timeElement"> </h2>  
-<div id="top" > <img class="sunglass" id="welcomeopen"src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/d0fc0c90-5b89-4871-97de-57cf3422d2f0/d4d0spq-f2e85335-84dc-48fe-8b35-dafc517e9f12.png" alt="rainbow dash with sunglasses"></div> 
+<div > <img class="sunglass" id="welcomeopen"src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/d0fc0c90-5b89-4871-97de-57cf3422d2f0/d4d0spq-f2e85335-84dc-48fe-8b35-dafc517e9f12.png" alt="rainbow dash with sunglasses"></div> 
 <img class="runningGIF" src="https://i.pinimg.com/originals/10/b7/d4/10b7d409056fb5ebadf13eb20ddf7d87.gif" alt="rainbow dash running gif" > </div>
 <div id="notesopen" class="" > 
    <div id="notesIcon"class="notesIcon">
@@ -34,16 +34,29 @@
 <div id="noteswindow" >
 <img id="notesclose" class="closewindow" 
 src="https://i.pinimg.com/originals/d7/72/2c/d7722c2caecc466a80e3e0ebdac33341.jpg" alt="notes close">
-<div id="noteswindowheader"> <p class="notesheader">Twilight Notes</p> </div>
-<div class="notescontent"> 
-<p> notes i guess </p>
-<div class="notescontentbotbar"><button class="addnotes"> </button> </div>
-</div>
+<div id="header"> <p class="notesheader">Twilight Notes</p> <button class="addnotes" onclick="openNoteDialog()"> add note  </button> </div>
+<main id="notescontainer" class="notes-grid"> </main>  
+<dialog id="notedialog"> 
+   <div id="dialog-content"> 
+   <div id="dialog-header"> 
+      <h2 class="dialog-title" id="dialog-title"> add new note</h2> 
+      <Button class="close-button" onclick="closeNoteDialog()"> X</Button>
+   </div>
+   <form id="noteform"> 
+    <div class="noteForm"> 
+    <label for="notesContent" class="form-label">Title</label>
+    <input type="text" id="noteTitle" class="form-input" placeholder="Enter note title ..." required>
+ </div> 
+    <div class="form-group"> 
+    <label for="noteContent"class="form-label"> content </label> 
+    <textarea id="noteContent" class="form-textarea" placeholder="Write your note here..." required> </textarea>
+ </div>
 
-
-
-
-
+<div class="dialog-action"> 
+   <button type="button" class="cancel-button" onclick="closeNoteDialog()"> cancel </button>
+   <button type="submit" class="save-button"> Save Note</button>
+ </div> 
+</form> </div> </dialog> 
 </div>
 <script src="script.js"> </script>
 </body>

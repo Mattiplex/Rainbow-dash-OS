@@ -103,10 +103,10 @@ function deselectIcon(elmnt) {
   selectedIcon = undefined ; 
 }
 
-function handleIconTap(elmnt) {
+function handleIconTap(elmnt,window) {
   if (elmnt.classList.contains("selected")) {
    deselectIcon(elmnt);
-   openWindow(noteswindow); 
+   openWindow(window); 
   } else {
     selectIcon(elmnt);
   }
