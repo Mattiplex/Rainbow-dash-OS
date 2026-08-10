@@ -143,6 +143,32 @@ function initializeWindow(noteswindow) {
   
 }
 
+let notes =[]
+
+function openNoteDialog() {
+  const dialog = document.getElementById('noteDialog');
+  const titleInput = document.getElementById('noteTitle');
+  const contentInput = document.getElementById('noteContent');
+
+  dialog.showModal()
+  titleInput.focus()
+
+}
+
+function closeNoteDialog() {
+  document.getElementById('noteDialog').close()
+}
+
+document.addEventListener('DOMContentLoaded',function() {
+
+  document.getElementById('noteDialog').addEventListener('click',function(event) {
+    if(event.target === this) {
+      closeNoteDialog()
+    }
+  })
+})
+
+
 // <![CDATA[
 var speed=100; // speed colours change, 1 second = 1000
 var glow=5; // can be set from '0' for no glow, to 10
