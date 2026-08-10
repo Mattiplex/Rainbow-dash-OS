@@ -46,8 +46,6 @@ word-break: normal ;
   background-color: rgba(230,101,54,0.85);
   backdrop-filter:brightness(3) ;
   border-radius: 20px ;
-  position:fixed;
-  z-index:1000;
 }
 
 #OSname {
