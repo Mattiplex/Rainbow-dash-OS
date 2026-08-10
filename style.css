@@ -38,6 +38,11 @@ font-size: larger;
 word-break: normal ;
 }
 
+#top {
+  position:fixed;
+  z-index:1000;
+}
+
 .header { 
   display: flex; 
   justify-content: flex-start ;
