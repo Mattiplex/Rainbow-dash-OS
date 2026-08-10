@@ -76,6 +76,8 @@ background-color: lightskyblue ;
 border-radius: 40px ;
 width:fit-content;
 font-family:'gorditas',sans-serif; 
+margin-left:60px;
+color:rgba(230,101,54,0.85);
 }
 
 .buttonmed {
@@ -83,7 +85,9 @@ background-color: lightskyblue ;
 border-radius: 40px ;
 width:fit-content;
 font-family:'gorditas',sans-serif;
-margin-left: 5px;
+margin-left: 220px;
+margin-top:-57px;
+color:rgba(230,101,54,0.85);
 }
 
 .quote {
@@ -192,4 +196,51 @@ flex-direction:column;
   background-color:rgba(60,9,108,0.85);
   font-family:'gorditas',sans-serif;
   cursor:pointer;
+}
+
+#dialog-content {
+  background-color:purple;
+}
+
+#dialog-header {
+  background-color:violet;
+}
+
+.dialog-title {
+  background-color:red;
+
+}
+
+.close-button {
+background-color:aliceblue
+}
+
+.noteform {
+ background-color:aqua;
+}
+
+.form-label { 
+background-color:aquamarine;
+}
+
+.form-input {
+background-color:beige;
+}
+
+.form-group { 
+background-color:green;
+} 
+
+.form-textarea {
+background-color:bisque;
+
+}
+
+.cancel-button { 
+background-color:black;
+color:white;
+} 
+
+.save-button {
+background-color:brown;
 }
