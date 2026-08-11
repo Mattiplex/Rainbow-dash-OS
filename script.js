@@ -41,8 +41,15 @@ function dragElement(elmnt) {
     pos3 = e.clientX;
     pos4 = e.clientY;
     
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+     var newTop = element.offsetTop - currentY;
+    var newLeft = element.offsetLeft - currentX;
+
+    
+    if (newTop < 50) {
+      newTop = 50;
+    }
+    element.style.top = newTop + "px";
+    element.style.left = newLeft + "px";
   }
 
   function closeDragElement() {
@@ -55,7 +62,6 @@ function dragElement(elmnt) {
 var welcomeScreen = document.querySelector("#welcomescreen")
 var welcomeScreenClose = document.querySelector("#welcomeclose")
 var welcomeScreenOpen = document.querySelector("#welcomeopen")
-var topBar = document.querySelector("#top")
 var biggestIndex = 1
 
 function closeWindow(elmnt) {
@@ -117,23 +123,6 @@ function addwindowTapHandling(elmnt) {
 }
 
 addwindowTapHandling(document.getElementById("header"))
-
-function handleWindowTap(elmnt) {
-  biggestIndex++; // Increment biggestIndex by 1
-  elmnt.style.zIndex = biggestIndex;
-  topBar.style.zIndex = biggestIndex +1;
-  deselectIcon(selectedIcon);
-}
-
-function openWindow(elmnt) {
-  if (!elmnt) {
-    return;
-  }
-  elmnt.style.display = "flex";
-  biggestIndex++; // Increment biggestIndex by 1 
-  elmnt.style.zIndex = biggestIndex;
-  topBar.style.zIndex = biggestIndex +1;
-}
 
 function initializeWindow(noteswindow) {
   var screen =document.querySelector("#" + elmntName)
