@@ -45,8 +45,8 @@ function dragElement(elmnt) {
     var newLeft = elmnt.offsetLeft - pos1;
 
     
-    if (newTop < 60) {
-      newTop = 60;
+    if (newTop < 20) {
+      newTop = 20;
     }
     elmnt.style.top = newTop + "px";
     elmnt.style.left = newLeft + "px";
