@@ -82,16 +82,16 @@ welcomeScreenOpen.addEventListener("click",function() {
  openWindow(welcomeScreen);
 });
 
-var noteswindow = document.querySelector("#noteswindow")
-var notesclose = document.querySelector("#notesclose")
-var notesopen = document.querySelector("#notesopen")
+var NotesWindow = document.querySelector("#noteswindow")
+var NotesClose = document.querySelector("#notesclose")
+var NotesOpen = document.querySelector("#notesopen")
 
-notesopen.addEventListener("click",function(){
-  openWindow(noteswindow);
+NotesOpen.addEventListener("click",function(){
+  openWindow(NotesWindow);
 })
 
-notesclose.addEventListener("click",function(){
-  closeWindow(noteswindow);
+NotesClose.addEventListener("click",function(){
+  closeWindow(NotesWindow);
 })
 
 
