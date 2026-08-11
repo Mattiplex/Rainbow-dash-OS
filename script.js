@@ -41,15 +41,15 @@ function dragElement(elmnt) {
     pos3 = e.clientX;
     pos4 = e.clientY;
     
-     var newTop = element.offsetTop - pos2;
-    var newLeft = element.offsetLeft - pos1;
+     var newTop = elmnt.offsetTop - pos2;
+    var newLeft = elmnt.offsetLeft - pos1;
 
     
     if (newTop < 50) {
       newTop = 50;
     }
-    element.style.top = newTop + "px";
-    element.style.left = newLeft + "px";
+    elmnt.style.top = newTop + "px";
+    elmnt.style.left = newLeft + "px";
   }
 
   function closeDragElement() {
