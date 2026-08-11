@@ -71,8 +71,7 @@ function closeWindow(elmnt) {
 function openWindow(elmnt) { 
 elmnt.style.display = "flex";
 biggestIndex++; //Increment biggestIndex by 1 
-elmnt.style.zIndex = biggestIndex;
-topBar.style.zIndex = biggestIndex +1;
+elmnt.style.zIndex =biggestIndex;
 }
 
 welcomeScreenClose.addEventListener("click",function() {
