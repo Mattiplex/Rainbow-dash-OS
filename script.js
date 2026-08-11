@@ -41,8 +41,8 @@ function dragElement(elmnt) {
     pos3 = e.clientX;
     pos4 = e.clientY;
     
-     var newTop = element.offsetTop - currentY;
-    var newLeft = element.offsetLeft - currentX;
+     var newTop = element.offsetTop - pos2;
+    var newLeft = element.offsetLeft - pos1;
 
     
     if (newTop < 50) {
