@@ -94,6 +94,9 @@ NotesClose.addEventListener("click",function(){
   closeWindow(NotesWindow);
 })
 
+console.log(closeWindow)
+
+
 
 var selectedIcon = undefined ;
 
