@@ -96,46 +96,6 @@ NotesClose.addEventListener("click",function(){
 
 console.log(closeWindow)
 
-
-
-var selectedIcon = undefined ;
-
-function selectIcon(elmnt) {
-  elmnt.classList.add("selected");
-  selectedIcon = elmnt; 
-} 
-
-function deselectIcon(elmnt) {
-  if (!elmnt) {
-    return;
-  }
-  elmnt.classList.remove("selected");
-  selectedIcon = undefined ; 
-}
-
-function handleIconTap(elmnt,window) {
-  if (elmnt.classList.contains("selected")) {
-   deselectIcon(elmnt);
-   openWindow(window); 
-  } else {
-    selectIcon(elmnt);
-  }
-}
-
-function addwindowTapHandling(elmnt) {
-  elmnt.addEventListener("mousedown",() => handleWindowTap(elmnt))
-}
-
-addwindowTapHandling(document.getElementById("header"))
-
-function initializeWindow(noteswindow) {
-  var screen =document.querySelector("#" + elmntName)
-  addwindowTapHandling(screen);
-  makeClosable(elmntName);
-  dragElement(screen);
-  
-}
-
 let notes =[]
 
 function openNoteDialog() {
