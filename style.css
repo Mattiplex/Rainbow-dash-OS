@@ -165,11 +165,6 @@ display:none;
 flex-direction:column;
 }
 
-#notesclose {
-  z-index:1000;
-  position: relative;
-}
-
 .notesheader {
   background-image:url(); 
   background-color:violet;
