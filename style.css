@@ -137,7 +137,11 @@ padding: 5px ;
   border-radius:20px;
   background-color:rgba(60,9,108,0.85);
   margin-top:5px;
+}
 
+.notesopen {
+width:fit-content;
+height:fit-content;
 }
 
 .twilghtnotes {
