@@ -88,14 +88,10 @@ var NotesOpen = document.querySelector("#notesopen")
 
 NotesOpen.addEventListener("click",function(){
   openWindow(NotesWindow);
-  console.log(openwindow)
-
 });
 
 NotesClose.addEventListener("click",function(){
   closeWindow(NotesWindow);
-console.log(closewindow)
-
 });
 
 
