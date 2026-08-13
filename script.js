@@ -91,6 +91,7 @@ NotesOpen.addEventListener("click",function(){
 });
 
 NotesClose.addEventListener("click",function(){
+  event.stopPropagation();
   closeWindow(NotesWindow);
 });
 
