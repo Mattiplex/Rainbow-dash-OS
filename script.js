@@ -95,6 +95,38 @@ NotesClose.addEventListener("click",function(){
   closeWindow(NotesWindow);
 });
 
+var selectedIcon = undefined
+
+function selectIcon(element) {
+  element.classList.add('selected')
+  selectedIcon = element
+}
+
+function deselectIcon(element) {
+  element.classList.remove('selected')
+  selectedIcon = undefined
+}
+
+function handleIconTap(element, window) {
+  if (element.classList.contains('selected')) {
+    deselectIcon(element)
+    openWindow(window)
+  } else {
+    selectIcon(element)
+  }
+}
+
+
+function addWindowTapHandling(element) {
+  element.addEventListener('mousedown', () => handleWindowTap(element))
+}
+
+function handleWindowTap(element) {
+  biggestIndex++ // Increment biggestIndex by 1
+  element.style.zIndex = biggestIndex
+  topBar.style.zIndex = biggestIndex + 1
+  deselectIcon(selectedIcon)
+}
 
 let notes =[]
 
