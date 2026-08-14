@@ -158,7 +158,7 @@ notes[noteIndex] = {
   notes.unshift({
     id: generateId(),
     title: title,
-    content: content
+    content: 
   })
 }
 
