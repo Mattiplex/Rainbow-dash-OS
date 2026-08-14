@@ -129,19 +129,42 @@ function handleWindowTap(element) {
 }
 
 let notes =[]
+let editingNoteId = null
+
+function loadNotes() {
+  const savedNotes = localStorage.getItem('quickNotes')
+  return savedNotes ? JSON.parse(savedNotes) : []
+}
 
 function saveNote(event) {
   event.preventDefault()
+
   const title = document.getElementById('noteTitle').value.trim();
   const content = document.getElementById('noteContent').value.trim();
+
+if(editingNoteId) {
+  // Update Exisitng Note
+
+const noteIndex = Notes.findIndex(note => note.id === editingNoteId)
+notes[noteIndex] = {
+  ...notes[noteIndex],
+  title: title,
+  content: content
+}
+
+} else {
+ // Add New Note
 
   notes.unshift({
     id: generateId(),
     title: title,
     content: content
   })
+}
 
+  closeNoteDialog()
   saveNotes()
+  renderNotes()
 }
 
 function generateId() {
@@ -152,10 +175,66 @@ function saveNotes() {
   localStorage.setItem('quickNotes', JSON.stringify(notes))
 }
 
-function openNoteDialog() {
+function deleteNote(noteId) {
+  notes = notes.filter(note => note.id != noteId)
+  saveNotes()
+  renderNotes()
+}
+
+function renderNotes() {
+  const notesContainer = document.getElementById('notesContainer');
+
+  if(notes.length === 0) {
+    notesContainer.innerHTML = `
+    <div class="empty-state">
+    <h2>No notes yet</h2>
+    <p>did you forget anything important today ?</p>
+    <button class="add-note-button" onclick="openNoteDialog()"+ Add Your First Note</button>
+    </div>
+    `
+
+    return
+  }
+
+  notesContainer.innerHTML = notes.map(note =>`
+    <div class="note-card">
+    <h3 class="note-title">${Note.title}</h3>
+    <p class="note-content">${note.content}</p>
+    <div class="note-actions">
+    <button class="edit-button" onclick="openNoteDialog('${note.id}')" title="edit Note">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325"/>
+    </svg> 
+    </button>
+    <button class="delete-button" onclick="deleteNote('${note.id}')" title="delete Note">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+    </svg> 
+    </button>
+ </div>
+    `).join('')
+}
+
+function openNoteDialog(noteId = null) {
   const dialog = document.getElementById('noteDialog');
   const titleInput = document.getElementById('noteTitle');
   const contentInput = document.getElementById('noteContent');
+
+  if(noteId) {
+    //Edit Mode
+    const noteToEdit = notes.find(note => note.id === noteId)
+    editingNoteId = noteId
+    document.getElementById('dialogTitle').textContent = 'Edit Note'
+    titleInput.value = noteToEdit.title
+    contentInput.value = noteToEdit.content
+  }
+  else {
+    // Add Mode
+    editingNoteId = null 
+    document.getElementById('dialogTitle').tectContent = 'Add New Note'
+    titleInput.value = ''
+    contentInput.value = ''
+  }
 
   dialog.showModal()
   titleInput.focus()
@@ -167,6 +246,9 @@ function closeNoteDialog() {
 }
 
 document.addEventListener('DOMContentLoaded',function() {
+notes =loadNotes()
+renderNotes()
+
 
   document.getElementById('noteForm').addEventListener('submit',saveNote)
 
