@@ -246,7 +246,7 @@ function closeNoteDialog() {
 }
 
 document.addEventListener('DOMContentLoaded',function() {
-notes =loadNotes()
+notes = loadNotes()
 renderNotes()
 
 
