@@ -198,7 +198,7 @@ function renderNotes() {
 
   notesContainer.innerHTML = notes.map(note =>`
     <div class="note-card">
-    <h3 class="note-title">${Note.title}</h3>
+    <h3 class="note-title">${note.title}</h3>
     <p class="note-content">${note.content}</p>
     <div class="note-actions">
     <button class="edit-button" onclick="openNoteDialog('${note.id}')" title="edit Note">
@@ -231,7 +231,7 @@ function openNoteDialog(noteId = null) {
   else {
     // Add Mode
     editingNoteId = null 
-    document.getElementById('dialogTitle').tectContent = 'Add New Note'
+    document.getElementById('dialogTitle').textContent = 'Add New Note'
     titleInput.value = ''
     contentInput.value = ''
   }
