@@ -145,7 +145,7 @@ function saveNote(event) {
 if(editingNoteId) {
   // Update Exisitng Note
 
-const noteIndex = Notes.findIndex(note => note.id === editingNoteId)
+const noteIndex = notes.findIndex(note => note.id === editingNoteId)
 notes[noteIndex] = {
   ...notes[noteIndex],
   title: title,
