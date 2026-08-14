@@ -149,7 +149,7 @@ const noteIndex = notes.findIndex(note => note.id === editingNoteId)
 notes[noteIndex] = {
   ...notes[noteIndex],
   title: title,
-  content: content
+  content: conten
 }
 
 } else {
