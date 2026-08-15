@@ -313,3 +313,8 @@ function raining() {
   raincnt++;
 }
 
+src="https://unpkg.com/cursor-effects@latest/dist/browser.js"
+
+window.addEventListener("load", (event) => {
+  new cursoreffects.rainbowCursor();
+});
