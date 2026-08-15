@@ -485,9 +485,4 @@ function raining() {
 
   init();
 
-  return {
-    destroy: destroy
-  }
-
   // cursor credit goes to https://tholman.com/cursor-effects/
-  
