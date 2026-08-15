@@ -314,10 +314,10 @@ function raining() {
   raincnt++;
 }
 
-
-  let hasWrapperEl = options && options.element;
-  let element = hasWrapperEl || document.body;
-
+window.addEventListener("load", (event) => {
+  new cursoreffects.rainbowCursor();
+});
+  
   let width = window.innerWidth;
   let height = window.innerHeight;
   let cursor = { x: width / 2, y: width / 2 };
