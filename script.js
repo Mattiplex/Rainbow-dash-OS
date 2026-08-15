@@ -315,8 +315,6 @@ function raining() {
 }
 
 
-
-export function rainbowCursor(options) {
   let hasWrapperEl = options && options.element;
   let element = hasWrapperEl || document.body;
 
@@ -490,4 +488,6 @@ export function rainbowCursor(options) {
   return {
     destroy: destroy
   }
-}
+
+  // cursor credit goes to https://tholman.com/cursor-effects/
+  
