@@ -317,8 +317,6 @@ function raining() {
  import { rainbowCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
 
   new rainbowCursor({
-    length:4,
-    size:4,
   });
 
   window.addEventListener("load", (event) => {
