@@ -263,9 +263,9 @@ renderNotes()
 
 // <![CDATA[
 var speed=100; // speed colours change, 1 second = 1000
-var glow=3; // can be set from '0' for no glow, to 10
+var glow=5; // can be set from '0' for no glow, to 10
 var raincol=new Array("#ff0000", "#ff5500", "#ffaa00", "#ffff00", "#aaff00", "#55ff00", "#00ff00", "#00ff55", "#00ffaa", "#00ffff", "#00aaff", "#0055ff", "#0000ff", "#5500ff", "#aa00ff", "#ff00ff", "#ff00aa", "#ff0055"); // change the colours if you want to
-var alink="http://www.mf2fm.com/rv/"; // page to link text to (set to ="" for no link)
+var alink=""; // page to link text to (set to ="" for no link)
 
 /****************************
 *    Rainbow Text Effect    *
@@ -301,9 +301,8 @@ function regenbogen() { if (document.getElementById) {
     }
     rainbow.appendChild(rainbeau);
   }
-  rainbow=setInterval ("raining()", speed);
+  rainbow=setInterval (raining, speed);
 }}
-
 function raining() {
   var i, c;
   for (i=0; i<raintxt.length; i++) {
@@ -315,3 +314,13 @@ function raining() {
 }
 // ]]>
 
+ import { rainbowCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
+
+  new rainbowCursor({
+    length:4,
+    size:4,
+  });
+
+  window.addEventListener("load", (event) => {
+  new cursoreffects.rainbowCursor();
+});
