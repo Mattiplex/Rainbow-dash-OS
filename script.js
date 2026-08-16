@@ -313,14 +313,13 @@ function raining() {
   }
   raincnt++;
 }
-// ]]>
 
- import { rainbowCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
 
-  new cursoreffects.rainbowCursor({
-    zIndex:1000,
-  });
+//import { rainbowCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
 
-  window.addEventListener("load", (event) => {
-  new cursoreffects.rainbowCursor();
-});
+ // new cursoreffects.rainbowCursor({
+ // });
+
+ // window.addEventListener("load", (event) => {
+ // new cursoreffects.rainbowCursor();
+ // });
