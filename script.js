@@ -313,10 +313,13 @@ function raining() {
   }
   raincnt++;
 }
+// ]]>
 
  import { rainbowCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
 
-  new rainbowCursor();
+  new cursoreffects.rainbowCursor({
+    zIndex:1000,
+  });
 
   window.addEventListener("load", (event) => {
   new cursoreffects.rainbowCursor();
