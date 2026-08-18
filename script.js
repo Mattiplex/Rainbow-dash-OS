@@ -189,7 +189,7 @@ function renderNotes() {
     <div class="empty-state">
     <h2>No notes yet</h2>
     <p>did you forget anything important today ?</p>
-    <button class="add-note-button"> onclick="openNoteDialog()"+ Add Your First Note</button>
+    <button class="add-note-button"onclick="openNoteDialog()"+ Add Your First Note</button>
     </div>
     `
 
@@ -244,6 +244,11 @@ function openNoteDialog(noteId = null) {
 function closeNoteDialog() {
   document.getElementById('noteDialog').close()
 }
+
+window.openNoteDialog = openNoteDialog;
+window.closeNoteDialog = closeNoteDialog;
+window.deleteNote = deleteNote;
+
 
 document.addEventListener('DOMContentLoaded',function() {
 notes = loadNotes()
