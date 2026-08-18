@@ -189,7 +189,7 @@ function renderNotes() {
     <div class="empty-state">
     <h2>No notes yet</h2>
     <p>did you forget anything important today ?</p>
-    <button class="add-note-button" onclick="openNoteDialog()"+ Add Your First Note</button>
+    <button class="add-note-button"> onclick="openNoteDialog()"+ Add Your First Note</button>
     </div>
     `
 
@@ -322,3 +322,6 @@ function raining() {
   window.addEventListener("load", (event) => {
   new cursoreffects.rainbowCursor();
 });
+
+const targetElement = document.querySelector("#cursorRainbow");
+new cursoreffects.rainbowCursor({ element: targetElement });
