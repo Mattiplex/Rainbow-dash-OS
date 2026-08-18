@@ -38,7 +38,7 @@ font-size: larger;
 word-break: normal ;
 }
 
-#cursorRainbow {
+#rainbowCursor{
   z-index:9999;
 }
 

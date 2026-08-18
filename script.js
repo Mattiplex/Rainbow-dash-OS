@@ -323,5 +323,5 @@ function raining() {
   new cursoreffects.rainbowCursor();
 });
 
-const targetElement = document.querySelector("#cursorRainbow");
-new cursoreffects.rainbowCursor({ element: cursorRainbow });
+const targetElement = document.querySelector("#rainbowCursor");
+new cursoreffects.rainbowCursor({ element: targetElement });
