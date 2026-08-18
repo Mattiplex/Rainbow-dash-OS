@@ -207,42 +207,65 @@ flex-direction:column;
   cursor:pointer;
 }
 
-#dialog-content {
-  background-color:purple;
+#noteDialog {
+  background:transparent;
+  border:none;
+  padding:0px;
 }
 
-#dialog-header {
-  background-color:violet;
+#dialog-content {
+  background-color:purple;
+  border-radius:28px;
+  padding-left:10px;
+  padding-right:10px;
+  border:dotted black ;
+  border-width:thick;
+  overflow:hidden;
 }
 
 .dialog-title {
-  background-color:red;
+  background-color:rgba(93, 63, 211);
+  border-radius:20px;
+  padding:2px;
+  font-family:'gorditas';
 
 }
 
 .close-button {
-background-color:aliceblue
+background-color:rgba(127,0,255);
+border-radius:40px;
+height:30px;
+width:30px;
 }
 
-.noteform {
- background-color:aqua;
+#noteform {
+ background-color:rgba(218,112,214);
+ background-image:url();
+ border-radius:20px;
 }
 
 .form-label { 
-background-color:aquamarine;
+background-color:rgba(195,177,225);
+border-radius:20px;
+padding:3px;
 }
 
 .form-input {
-background-color:beige;
+background-color:rgba(224,176,255);
+width:200px;
+font-family:'gorditas';
 }
 
 .form-group { 
-background-color:green;
+padding:8px;
 } 
 
 .form-textarea {
-background-color:bisque;
-
+background-color:rgba(224,176,255);
+width:160px;
+height:80px;
+font-family:'gorditas';
+font-size:small;
 }
 
 .cancel-button { 
