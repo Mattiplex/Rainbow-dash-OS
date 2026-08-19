@@ -322,4 +322,16 @@ function raining() {
 
  import { rainbowCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
 
-rainbowCursor();
+const targetElement = document.querySelector("#rainbowCursor");
+new rainbowCursor({ element: targetElement });
+
+let relaying = false;
+function relay(e) {
+  if (relaying) return;
+  relaying = true;
+  targetElement.dispatchEvent(new MouseEvent(e.type, e));
+  relaying = false;
+}
+window.addEventListener('mousemove', relay);
+window.addEventListener('touchmove', relay, { passive: true });
+window.addEventListener('touchstart', relay, { passive: true });
