@@ -322,12 +322,5 @@ function raining() {
 
  import { rainbowCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
 
-  new rainbowCursor({
-  });
-
-  window.addEventListener("load", (event) => {
-  new cursoreffects.rainbowCursor();
-});
-
 const targetElement = document.querySelector("#rainbowCursor");
 new cursoreffects.rainbowCursor({ element: targetElement });
