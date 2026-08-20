@@ -1,3 +1,9 @@
+
+@font-face {
+src: url(https://dl.dropbox.com/s/8p8mi5uzbekohv7/Starborn.ttf);
+  font-family: starborn;}
+
+
 #welcomescreen {
   position: absolute;
   z-index: 9;
@@ -230,7 +236,7 @@ flex-direction:column;
   background-color:rgba(93, 63, 211);
   border-radius:20px;
   padding:2px;
-  font-family:'gorditas';
+  font-family:starborn;
 
 }
 
@@ -245,6 +251,7 @@ width:30px;
  background-color:rgba(218,112,214);
  background-image:url();
  border-radius:20px;
+ font-family:starborn;
 }
 
 .form-label { 
@@ -255,43 +262,75 @@ padding:3px;
 
 .form-input {
 background-color:rgba(224,176,255);
-width:200px;
-font-family:'gorditas';
+width:250px;
+font-family:starborn;
 }
 
 .form-group { 
 padding:8px;
 } 
 
+.position {
+  padding:1px;
+}
+
 .form-textarea {
 background-color:rgba(224,176,255);
-width:160px;
-height:80px;
-font-family:'gorditas';
+width:200px;
+height:100px;
+min-width:200px;
+min-height:100px;
+font-family:starborn;
 font-size:small;
+border-radius:5px;
 }
 
 .cancel-button { 
-background-color:black;
+background-color:red;
 color:white;
+margin:5px;
+border-radius:20px;
+font-family:starborn;
 } 
 
 .save-button {
-background-color:brown;
+background-color:limegreen;
+color:white;
+border-radius:20px;
+font-family:starborn;
 }
 
 .empty-state {
 background-color:pink;
+background-image:url();
 text-align:center;
 width:500px;
 height:250px;
-font-family:'gorditas';
+font-family:starborn;
 border-radius:20px;
 }
 
 .add-note-button {
   background-color:lightskyblue;
   padding:10px;
-  width:60px;
   border-radius:20px;
+  font-family:starborn;
+
 }
+
+.edit-button {
+  background-color:rgba(159,43,104);
+  border-radius:80px;
+  color:gold;
+  padding:6px;
+  font-family:starborn;
+}
+
+.delete-button { 
+background-color:rgba(159,43,104);
+border-radius:80px;
+color:gold;
+padding:6px;
+font-family:starborn;
+}
+
