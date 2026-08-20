@@ -271,8 +271,12 @@ padding:8px;
 } 
 
 .position {
-  padding:1px;
+ background-color:rgba(195,177,225);
+  border-radius:20px;
+  padding:3px;
+  width:fit-content;
 }
+
 
 .form-textarea {
 background-color:rgba(224,176,255);
