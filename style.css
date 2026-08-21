@@ -85,6 +85,11 @@ font-family:'gorditas', sans-serif;
       font-family:'gorditas', sans-serif;
 }
 
+.positionfixed {
+display: flex;
+justify-content: space-between;
+}
+
 .buttonvid {
 background-color: lightskyblue ;
 border-radius: 40px ;
@@ -316,7 +321,7 @@ border-radius:20px;
 
 .position2 {
  font-family:starborn;
- margin-top:80px;
+ margin-top:60px;
  width:300px;
 }
 
@@ -325,7 +330,7 @@ border-radius:20px;
   padding:10px;
   border-radius:20px;
   font-family:starborn;
-  margin-top:25px;
+  margin-top:45px;
   margin-left:220px;
 
 }
