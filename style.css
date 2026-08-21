@@ -87,7 +87,7 @@ font-family:'gorditas', sans-serif;
 
 .positionfixed {
 display: flex;
-justify-content: space-between;
+justify-content: space-evenly;
 }
 
 .buttonvid {
