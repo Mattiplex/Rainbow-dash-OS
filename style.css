@@ -90,7 +90,6 @@ background-color: lightskyblue ;
 border-radius: 40px ;
 width:fit-content;
 font-family:'gorditas',sans-serif; 
-margin-left:60px;
 color:rgba(230,101,54,0.85);
 }
 
@@ -99,8 +98,6 @@ background-color: lightskyblue ;
 border-radius: 40px ;
 width:fit-content;
 font-family:'gorditas',sans-serif;
-margin-left: 220px;
-margin-top:-57px;
 color:rgba(230,101,54,0.85);
 }
 
@@ -319,6 +316,8 @@ border-radius:20px;
 
 .position2 {
  font-family:starborn;
+ margin-top:80px;
+ width:300px;
 }
 
 .add-note-button {
@@ -326,6 +325,8 @@ border-radius:20px;
   padding:10px;
   border-radius:20px;
   font-family:starborn;
+  margin-top:25px;
+  margin-left:220px;
 
 }
 
