@@ -360,13 +360,15 @@ var rolltop;
 var referee=0;
 delay*=1000;
 
-if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+if (typeof('addRVLoadEvent')!='function') {function addRVLoadEvent(funky) {
   var oldonload=window.onload;
-  if (typeof(oldonload)!='function') window.onload=funky;
-  else window.onload=function() {
+  if (typeof(oldonload)!='function') {window.onload=funky;
+  }else{ window.onload=function() {
     if (oldonload) oldonload();
     funky();
-  }
+  };
+}
+}
 }
 
 addRVLoadEvent(prepare_to_go);
