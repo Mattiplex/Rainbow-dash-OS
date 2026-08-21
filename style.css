@@ -276,6 +276,7 @@ padding:8px;
   padding:3px;
   width:fit-content;
   margin-right:5px;
+  vertical-align:top;
 }
 
 
@@ -307,7 +308,8 @@ font-family:starborn;
 
 .empty-state {
 background-color:pink;
-background-image:url();
+background-image:src("blankState.png");
+background-size:auto;
 text-align:center;
 width:500px;
 height:250px;
