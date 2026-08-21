@@ -188,8 +188,8 @@ function renderNotes() {
     notesContainer.innerHTML = `
     <div class="empty-state">
     <h2>No notes yet</h2>
-    <p>did you forget anything important today ?</p>
-    <button class="add-note-button" onclick="openNoteDialog()"+> Add Your First Note</button>
+    <p class="position2">did you forget anything important today ?</p>
+    <button class="add-note-button" onclick="openNoteDialog()"+> Add Your First Note here !</button>
     </div>
     `
 

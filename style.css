@@ -308,13 +308,17 @@ font-family:starborn;
 
 .empty-state {
 background-color:pink;
-background-image:src("blankState.png");
-background-size:auto;
+background-image:url("blankState.png");
+background-size:cover;
 text-align:center;
 width:500px;
-height:250px;
+height:268px;
 font-family:starborn;
 border-radius:20px;
+}
+
+.position2 {
+ font-family:starborn;
 }
 
 .add-note-button {
