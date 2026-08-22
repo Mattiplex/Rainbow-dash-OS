@@ -368,7 +368,7 @@ function addRVLoadEvent(funky) {
 addRVLoadEvent(prepare_to_go);
 
 function prepare_to_go() {
-  var i;
+  var i, r;
   var r=document.getElementById("rolling");
   rolltop=r.clientHeight;
   while (r.childNodes.length) r.removeChild(r.childNodes[0]);
