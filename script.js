@@ -357,17 +357,17 @@ delay*=1000;
 
 function addRVLoadEvent(funky) {
   var oldonload=window.onload;
-  if (typeof(oldonload)!='function') window.onload=funky;
-  else window.onload=function() {
+  if (typeof(oldonload)!='function') {window.onload=funky;
+} else { window.onload=function() {
     if (oldonload) oldonload();
     funky();
   }
+ }
 }
 
 addRVLoadEvent(prepare_to_go);
 
 function prepare_to_go() {
-  var i, r;
   var r=document.getElementById("rolling");
   rolltop=r.clientHeight;
   while (r.childNodes.length) r.removeChild(r.childNodes[0]);
