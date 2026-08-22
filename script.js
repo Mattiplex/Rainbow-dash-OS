@@ -340,12 +340,7 @@ window.addEventListener('touchstart', relay, { passive: true });
 
 //rolling text effect
 
-var text=Array("20% Cooler In 10 Seconds Flat",
-   "time to take out the adorable trash", 
-   "Did you note how the web-address was turned into a hyperlink?", 
-   "Another free effect "+String.fromCharCode(169)+"2014 onwards RV's free DHTML effects",
-   "Check back from time to time to get the latest sexy scripts...", 
-   "...free to use on your web-site or blog. How good is that?"); // replace this with an array of your own text
+var text=Array("This is the ROLLING TEXT EFFECT", "Brought to you by the funky folks at www.mf2fm.com/rv", "Did you note how the web-address was turned into a hyperlink?", "Another free effect "+String.fromCharCode(169)+"2014 onwards RV's free DHTML effects", "Check back from time to time to get the latest sexy scripts...", "...free to use on your web-site or blog. How good is that?"); // replace this with an array of your own text
 var delay=10; // seconds between each new text item
 var speed=50; // speed of the scroll
 
@@ -360,15 +355,13 @@ var rolltop;
 var referee=0;
 delay*=1000;
 
-if (typeof('addRVLoadEvent')!='function') {function addRVLoadEvent(funky) {
+function addRVLoadEvent(funky) {
   var oldonload=window.onload;
-  if (typeof(oldonload)!='function') {window.onload=funky;
-  }else{ window.onload=function() {
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
     if (oldonload) oldonload();
     funky();
-  };
-}
-}
+  }
 }
 
 addRVLoadEvent(prepare_to_go);
