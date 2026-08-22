@@ -214,6 +214,7 @@ function renderNotes() {
     </svg> 
     </button>
  </div>
+ </div>
     `).join('')
 }
 
