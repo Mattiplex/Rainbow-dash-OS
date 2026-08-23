@@ -391,12 +391,12 @@ function prepare_to_go() {
  
 function rolling_in_the_hay() {
   var j=referee%text.length;
-  for (let i=rolltop; i>=0; i--) { setTimeout(() => {diddly[j].style.top = i + "px"; }, speed*(rolltop-i));
-  for (let i=-1; i>-rolltop; i--) { setTimeout(() => {diddly[j].style.top=i + "px";}, delay-speed*i);}
-  ++referee; 
+  for (let i=rolltop; i>= 0; i--) { setTimeout(() => {diddly[j].style.top = i + "px"; }, speed*(rolltop-i));}
+  for (let i=-1; i>-rolltop; i--) { setTimeout(() => {diddly[j].style.top=i + "px";}, delay + speed* (-i));}
+  referee++; 
   setTimeout(rolling_in_the_hay, delay);
  }
-}
+
  
 function slinkit(r, t) {
   var a, s, e;
