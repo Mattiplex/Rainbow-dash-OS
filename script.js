@@ -343,7 +343,7 @@ window.addEventListener('touchstart', relay, { passive: true });
 
 var text=Array("TALA", "TALA", "TALA"); // replace this with an array of your own text
 var delay=4; // seconds between each new text item
-var speed=10; // speed of the scroll
+var speed1=80; // speed of the scroll
  
 /***************************\
 *    Rolling Text Effect    *
@@ -391,8 +391,8 @@ function prepare_to_go() {
  
 function rolling_in_the_hay() {
   var j=referee%text.length;
-  for (let i=rolltop; i>= 0; i--) { setTimeout(() => {diddly[j].style.top = i + "px"; }, speed*(rolltop-i));}
-  for (let i=-1; i>-rolltop; i--) { setTimeout(() => {diddly[j].style.top=i + "px";}, delay + speed* (-i));}
+  for (let i=rolltop; i>= 0; i--) { setTimeout(() => {diddly[j].style.top = i + "px"; }, speed1*(rolltop-i));}
+  for (let i=-1; i>-rolltop; i--) { setTimeout(() => {diddly[j].style.top=i + "px";}, delay + speed1* (-i));}
   referee++; 
   setTimeout(rolling_in_the_hay, delay);
  }
