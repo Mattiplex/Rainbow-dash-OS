@@ -341,10 +341,10 @@ window.addEventListener('touchstart', relay, { passive: true });
 
 //rolling text effect
 
-var text=Array("This is the ROLLING TEXT EFFECT", "Brought to you by the funky folks at www.mf2fm.com/rv", "Did you note how the web-address was turned into a hyperlink?", "Another free effect "+String.fromCharCode(169)+"2014 onwards RV's free DHTML effects", "Check back from time to time to get the latest sexy scripts...", "...free to use on your web-site or blog. How good is that?"); // replace this with an array of your own text
-var delay=10; // seconds between each new text item
-var speed=50; // speed of the scroll
-
+var text=Array("TALA", "TALA", "TALA"); // replace this with an array of your own text
+var delay=4; // seconds between each new text item
+var speed=80; // speed of the scroll
+ 
 /***************************\
 *    Rolling Text Effect    *
 * (c)2014+ mf2fm web-design *
@@ -355,19 +355,18 @@ var diddly=new Array();
 var rolltop;
 var referee=0;
 delay*=1000;
-
-function addRVLoadEvent(funky) {
+ 
+if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
   var oldonload=window.onload;
-  if (typeof(oldonload)!='function') {window.onload=funky;
-} else { window.onload=function() {
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
     if (oldonload) oldonload();
     funky();
   }
- }
 }
-
+ 
 addRVLoadEvent(prepare_to_go);
-
+ 
 function prepare_to_go() {
   var i, r;
   var r=document.getElementById("rolling");
@@ -387,7 +386,7 @@ function prepare_to_go() {
   }
   rolling_in_the_hay();
 }
-
+ 
 function rolling_in_the_hay() {
   var i, j;
   j=referee%text.length;
@@ -396,7 +395,7 @@ function rolling_in_the_hay() {
   ++referee;
   setTimeout('rolling_in_the_hay()', delay);
 }
-
+ 
 function slinkit(r, t) {
   var a, s, e;
   s=t.indexOf("www");
