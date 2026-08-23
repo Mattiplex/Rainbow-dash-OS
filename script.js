@@ -343,7 +343,7 @@ window.addEventListener('touchstart', relay, { passive: true });
 
 var text=Array("TALA", "TALA", "TALA"); // replace this with an array of your own text
 var delay=4; // seconds between each new text item
-var speed=80; // speed of the scroll
+var speed=10; // speed of the scroll
  
 /***************************\
 *    Rolling Text Effect    *
