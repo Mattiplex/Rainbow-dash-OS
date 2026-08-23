@@ -358,12 +358,13 @@ delay*=1000;
  
 if (typeof window.addRVLoadEvent !=="function") { window.addRVLoadEvent = function (funky) {
   var oldonload=window.onload;
-  if (typeof(oldonload)!=="function") window.onload=funky;
-  else window.onload=function() {
+  if (typeof(oldonload)!=="function") {window.onload=funky;
+  }else{ window.onload=function() {
     if (oldonload) oldonload();
     funky();
-   }
- }
+   };
+  }
+ };
 }
  
 window.addRVLoadEvent(prepare_to_go);
