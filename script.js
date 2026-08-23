@@ -356,9 +356,9 @@ var rolltop;
 var referee=0;
 delay*=1000;
  
-if (typeof('addRVLoadEvent')!='function') { function addRVLoadEvent(funky) {
+if (typeof window.addRVLoadEvent !=="function") { window.addRVLoadEvent = function (funky) {
   var oldonload=window.onload;
-  if (typeof(oldonload)!='function') window.onload=funky;
+  if (typeof(oldonload)!=="function") window.onload=funky;
   else window.onload=function() {
     if (oldonload) oldonload();
     funky();
@@ -366,7 +366,7 @@ if (typeof('addRVLoadEvent')!='function') { function addRVLoadEvent(funky) {
  }
 }
  
-addRVLoadEvent(prepare_to_go);
+window.addRVLoadEvent(prepare_to_go);
  
 function prepare_to_go() {
   var i, r;
