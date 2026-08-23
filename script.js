@@ -390,12 +390,12 @@ function prepare_to_go() {
 }
  
 function rolling_in_the_hay() {
-  var i, j;
-  j=referee%text.length;
-  for (i=rolltop; i>=0; i--) setTimeout("diddly["+j+"].style.top='"+i+"px'", speed*(rolltop-i));
-  for (i=-1; i>-rolltop; i--) setTimeout("diddly["+j+"].style.top='"+i+"px'", delay-speed*i);
-  ++referee;
-  setTimeout('rolling_in_the_hay()', delay);
+  var j=referee%text.length;
+  for (i=rolltop; i>=0; i--) { setTimeout(() => {diddly[j].style.top = i + "px"; }, speed*(rolltop-i));
+  for (i=-1; i>-rolltop; i--) { setTimeout(() => {diddly[j].style.top=i + "px";}, delay-speed*i);}
+  ++referee; 
+  setTimeout(rolling_in_the_hay, delay);
+ }
 }
  
 function slinkit(r, t) {
