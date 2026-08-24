@@ -382,3 +382,10 @@ margin-bottom:5px;
   gap:5px;
   height:700px;
 }
+
+#rolling {
+ background-color: rgba(135,206,250,0.9);
+ border-radius: 20px;
+ width:300px; 
+ font-family:starborn;
+}
