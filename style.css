@@ -360,12 +360,15 @@ padding:5px;
 border:white solid 2px ;
 position:relative;
 margin-top:5px;
-height:138px;
+height:160px;
 }
 
 .note-title {
-overflow:scroll;
-margin-top:1px;
+overflow-y:auto;
+overflow-x:auto;
+white-space:nowrap;
+padding-bottom:10px;
+max-height:20px;
 }
 
 .note-content {
@@ -380,7 +383,7 @@ margin-bottom:5px;
   display: grid;
   grid-auto-flow:column;
   grid-template-rows: repeat(3,1fr);
-  gap:5px;
+  gap:10px;
   height:700px;
 }
 
@@ -389,7 +392,8 @@ margin-bottom:5px;
  border-radius: 5px;
  width:300px; 
  font-family:starborn;
- margin-top:28px;
+ margin-top:50px;
+ margin-left:590px;
  padding-left:20px;
  height:25px;
  font-family:starborn;
