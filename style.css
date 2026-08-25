@@ -83,6 +83,7 @@ font-family:'gorditas', sans-serif;
     margin-left: 16px ;
      padding: 6px ;
       font-family:'gorditas', sans-serif;
+      width:300px;
 }
 
 .positionfixed {
@@ -385,7 +386,12 @@ margin-bottom:5px;
 
 #rolling {
  background-color: rgba(135,206,250,0.9);
- border-radius: 20px;
+ border-radius: 5px;
  width:300px; 
  font-family:starborn;
+ margin-top:28px;
+ padding-left:20px;
+ height:25px;
+ font-family:starborn;
+ font-size:larger;
 }
