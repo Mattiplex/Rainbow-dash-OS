@@ -354,10 +354,12 @@ font-family:starborn;
 
 .note-card {
 background-image:url("noteBCG.png");
+background-size:contain;
 min-width:40px;
 max-width:140px;
 padding:5px;
-border:white solid 2px ;
+border:orchid solid 2px ;
+border-radius:5px;
 position:relative;
 margin-top:5px;
 height:160px;
@@ -369,14 +371,17 @@ overflow-x:auto;
 white-space:nowrap;
 padding-bottom:10px;
 max-height:20px;
+font-family:'gorditas';
 }
 
 .note-content {
-background-color:red;
+background-color:rgba(255,255,143,0.3);
 overflow-wrap:break-word;
 max-height:60px;
 overflow:scroll;
 margin-bottom:5px;
+font-family:'gorditas';
+border-radius:20px;
 }
 
 .notes-grid {
