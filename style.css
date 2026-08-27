@@ -354,7 +354,7 @@ font-family:starborn;
 
 .note-card {
 background-image:url("noteBCG.png");
-background-size:contain;
+background-size:cover;
 min-width:40px;
 max-width:140px;
 padding:5px;
@@ -395,7 +395,7 @@ border-radius:20px;
 #rolling {
  background-color: rgba(135,206,250,0.9);
  border-radius: 5px;
- width:300px; 
+ width:440px; 
  font-family:starborn;
  margin-top:50px;
  margin-left:590px;
@@ -403,4 +403,9 @@ border-radius:20px;
  height:25px;
  font-family:starborn;
  font-size:larger;
+}
+
+.rollingtextquote {
+  background-image:("quote.png");
+  background-size:cover;
 }
