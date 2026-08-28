@@ -394,31 +394,38 @@ border-radius:20px;
 }
 
 #rolling {
- background-color: rgba(135,206,250,0.9);
+ background-color: rgba(135,206,250,0.95);
  border-radius: 5px;
- width:400px; 
+ width:280px; 
  font-family:starborn;
  margin-top:50px;
- margin-left:540px;
+ margin-left:640px;
  padding-left:20px;
  height: 20px;
  font-family:starborn;
  font-size:small;
+ border: solid white 2px;
 }
 
 .rollingtextquote {
   background-image:url("quote.png");
-  background-size:cover;
+  background-size:270px;
   padding-left:20px;
   padding-right:20px;
   border-radius:20px;
   height:40px;
-  width:150px;
+  width:234px;
   text-align:center;
   align-content:center;
   position:absolute; 
-  margin-left:1100px;
-  margin-top:10px;
+  margin-left:995px;
+  margin-top:5px;
   z-index:20px;
+} 
+
+.link {
   font-family:'gorditas';
+  font-size: large;
+  text-decoration:none;
+  color: black;
 }
