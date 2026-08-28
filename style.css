@@ -134,7 +134,7 @@ padding: 5px ;
  width: 120px ;
  position:absolute;
  top: -35px;
- left: 650px;
+ left: 675px;
 }
 
 .closewindow {
@@ -396,17 +396,29 @@ border-radius:20px;
 #rolling {
  background-color: rgba(135,206,250,0.9);
  border-radius: 5px;
- width:440px; 
+ width:400px; 
  font-family:starborn;
  margin-top:50px;
- margin-left:590px;
+ margin-left:540px;
  padding-left:20px;
- height:25px;
+ height: 20px;
  font-family:starborn;
- font-size:larger;
+ font-size:small;
 }
 
 .rollingtextquote {
-  background-image:("quote.png");
+  background-image:url("quote.png");
   background-size:cover;
+  padding-left:20px;
+  padding-right:20px;
+  border-radius:20px;
+  height:40px;
+  width:150px;
+  text-align:center;
+  align-content:center;
+  position:absolute; 
+  margin-left:1100px;
+  margin-top:10px;
+  z-index:20px;
+  font-family:'gorditas';
 }
