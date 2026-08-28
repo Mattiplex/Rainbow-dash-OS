@@ -80,10 +80,11 @@ font-family:'gorditas', sans-serif;
 .timeElement {
    background-color: rgba(135,206,250,0.9);
    border-radius: 20px;
-    margin-left: 16px ;
+    margin-left: 360px ;
      padding: 6px ;
       font-family:'gorditas', sans-serif;
       width:300px;
+      position: fixed;
 }
 
 .positionfixed {

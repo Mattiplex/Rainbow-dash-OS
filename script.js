@@ -326,7 +326,7 @@ function raining() {
  import { rainbowCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
 
 const targetElement = document.querySelector("#rainbowCursor");
-new rainbowCursor({ element: targetElement });
+new rainbowCursor({ element: targetElement },{length:15,size:5,});
 
 let relaying = false;
 function relay(e) {
