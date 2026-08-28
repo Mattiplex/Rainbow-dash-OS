@@ -9,7 +9,7 @@ current features:
 5.rotating text effect  
 6.draggable windows 
 
-planned features: 
+planned features:  
 1.music player  
 ... and others ( i haven't thought abt it yet)
 
