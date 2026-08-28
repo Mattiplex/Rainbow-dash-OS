@@ -269,6 +269,8 @@ renderNotes()
 })
 
 // special effects and cool open source stuff
+// note some of the code are modified to fit my exact needs,
+// so always take code directly from the source 
 
 // rainbow text effect
 var speed=100; // speed colours change, 1 second = 1000
