@@ -341,7 +341,7 @@ window.addEventListener('touchstart', relay, { passive: true });
 
 //rolling text effect
 
-var text=Array("testing ,testing, testing ", "is this thing on ?", "TALA"); // replace this with an array of your own text
+var text=Array("Rainbow Dash is da best Pony !", "what's up , Brony ?", "This Site needs to be 20% cooler"); // replace this with an array of your own text
 var delay=8; // seconds between each new text item
 var speed1=80; // speed of the scroll
  
