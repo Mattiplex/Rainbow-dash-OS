@@ -399,7 +399,7 @@ border-radius:20px;
  width:280px; 
  font-family:starborn;
  margin-top:50px;
- margin-left:640px;
+ margin-left:680px;
  padding-left:20px;
  height: 20px;
  font-family:starborn;
@@ -418,14 +418,13 @@ border-radius:20px;
   text-align:center;
   align-content:center;
   position:absolute; 
-  margin-left:995px;
+  margin-left:1039px;
   margin-top:5px;
   z-index:20px;
 } 
 
 .link {
   font-family:'gorditas';
-  font-size: large;
   text-decoration:none;
   color: black;
 }
