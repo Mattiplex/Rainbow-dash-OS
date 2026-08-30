@@ -428,3 +428,16 @@ border-radius:20px;
   text-decoration:none;
   color: black;
 }
+
+.musicOpen {
+  background-color:rgba(49,103,204,0.85);
+}
+
+.musicIcon {
+height:fit-content;
+width:fit-content;
+}
+
+.musicWindows {
+  background-color:bisque;
+}

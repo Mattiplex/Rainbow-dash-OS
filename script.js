@@ -9,7 +9,7 @@ setInterval(updatetime, 1000);
 
 dragElement(document.getElementById("welcomescreen"));
 dragElement(document.getElementById("noteswindow"));
-
+dragElement(document.getElementById("musicWindows"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -94,6 +94,19 @@ NotesClose.addEventListener("click",function(){
   event.stopPropagation();
   closeWindow(NotesWindow);
 });
+
+var MusicWindow = document.querySelector("#musicWindows")
+var MusicOpen = document.querySelector("#musicOpen")
+var MusicClose = document.querySelector("#musicClose")
+
+MusicOpen.addEventListener("click",function(){
+  openWindow(MusicWindow);
+})
+
+MusicClose.addEventListener("click",function(){
+  event.stopPropagation();
+  closeWindow(MusicWindow);
+})
 
 var selectedIcon = undefined
 
