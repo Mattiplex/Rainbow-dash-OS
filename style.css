@@ -431,11 +431,23 @@ border-radius:20px;
 
 .musicOpen {
   background-color:rgba(49,103,204,0.85);
+  height:fit-content;
+  width:fit-content;
+  margin-top:5px;
+  border-radius:20px;
 }
 
 .musicIcon {
-height:fit-content;
-width:fit-content;
+text-align:center;
+}
+
+.spinningPony {
+height:105px;
+width:120px;
+}
+
+.musicIconText {
+font-family:'gorditas';
 }
 
 .musicWindows {

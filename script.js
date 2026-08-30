@@ -104,7 +104,6 @@ MusicOpen.addEventListener("click",function(){
 })
 
 MusicClose.addEventListener("click",function(){
-  event.stopPropagation();
   closeWindow(MusicWindow);
 })
 
