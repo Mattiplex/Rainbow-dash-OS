@@ -439,17 +439,19 @@ border-radius:20px;
 
 .musicIcon {
 text-align:center;
+color:rgba(0,234,216)
 }
 
 .spinningPony {
 height:105px;
 width:120px;
-padding:5px;
+padding:5px 5px 0px 5px;
 }
 
 .musicIconText {
 font-family:'gorditas';
 margin-top:1px;
+height:25px;
 }
 
 .musicWindows {
@@ -458,33 +460,35 @@ margin-top:1px;
   width:450px;
   height:300px;
   position:absolute;
-  top:40px;
-  left:120px;
+  top:70px;
+  left:170px;
   padding:5px;
   border-radius:20px;
 }
 
 .chatOpen {
-  background-color:rgba(288,169,93,0.85);
+  background-color:rgba(239,111,47,0.85);
   height:fit-content;
   width:fit-content;
-  margin-top:5px;
+  margin-top:-10px;
   border-radius:20px;
 }
 
 .chatIcon {
   text-align:center;
+  color:rgba(250,245,171)
 }
 
 .happyJack {
   height:105px;
   width:120px;
-  padding:5px;
+  padding:5px 5px 0px 5px;
 }
 
 .chatIconText {
   font-family:'gorditas';
   margin-top:1px;
+  height:25px;
 }
 
 .chatWindows {
@@ -494,8 +498,8 @@ margin-top:1px;
   position:absolute;
   width:680px;
   height:600px;
-  top:40px;
-  left:120px;
+  top:70px;
+  left:180px;
   border-radius:20px;
   padding:5px;
 }
