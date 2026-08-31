@@ -172,7 +172,7 @@ color:rgba(199,157,215);
 margin-top:1px;
 }
 
-#noteswindow {
+#noteswindows {
 background-image:url(https://i.pinimg.com/originals/3d/82/f0/3d82f0cf6ed646bc996c01c4a898bb22.jpg);
 background-size: cover;
 width:500px;
@@ -457,6 +457,7 @@ margin-top:1px;
   display:none;
   width:450px;
   height:300px;
+  position:absolute;
 }
 
 .chatOpen {
@@ -484,5 +485,9 @@ margin-top:1px;
 
 .chatWindows {
   background-image:url("construction.png");
+  background-size:cover;
   display:none;
+  position:absolute;
+  width:680px;
+  height:600px;
 }

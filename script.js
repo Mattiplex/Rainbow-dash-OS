@@ -8,8 +8,9 @@ function updatetime() {
 setInterval(updatetime, 1000); 
 
 dragElement(document.getElementById("welcomescreen"));
-dragElement(document.getElementById("noteswindow"));
+dragElement(document.getElementById("noteswindows"));
 dragElement(document.getElementById("musicWindows"));
+dragElement(document.getElementById("chatWindows"))
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -82,7 +83,7 @@ welcomeScreenOpen.addEventListener("click",function() {
  openWindow(welcomeScreen);
 });
 
-var NotesWindow = document.querySelector("#noteswindow")
+var NotesWindow = document.querySelector("#noteswindows")
 var NotesClose = document.querySelector("#notesclose")
 var NotesOpen = document.querySelector("#notesopen")
 
@@ -116,7 +117,7 @@ ChatOpen.addEventListener("click",function(){
 })
 
 ChatClose.addEventListener("click",function(){
-  openWindow(ChatWindows)
+  closeWindow(ChatWindows)
 })
 
 var selectedIcon = undefined
