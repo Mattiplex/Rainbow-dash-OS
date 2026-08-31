@@ -458,6 +458,10 @@ margin-top:1px;
   width:450px;
   height:300px;
   position:absolute;
+  top:40px;
+  left:120px;
+  padding:5px;
+  border-radius:20px;
 }
 
 .chatOpen {
@@ -490,6 +494,8 @@ margin-top:1px;
   position:absolute;
   width:680px;
   height:600px;
-  top:0px;
-  left:0px;
+  top:40px;
+  left:120px;
+  border-radius:20px;
+  padding:5px;
 }
