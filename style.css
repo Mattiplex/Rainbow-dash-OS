@@ -444,12 +444,45 @@ text-align:center;
 .spinningPony {
 height:105px;
 width:120px;
+padding:5px;
 }
 
 .musicIconText {
 font-family:'gorditas';
+margin-top:1px;
 }
 
 .musicWindows {
   background-color:bisque;
+  display:none;
+  width:450px;
+  height:300px;
+}
+
+.chatOpen {
+  background-color:rgba(288,169,93,0.85);
+  height:fit-content;
+  width:fit-content;
+  margin-top:5px;
+  border-radius:20px;
+}
+
+.chatIcon {
+  text-align:center;
+}
+
+.happyJack {
+  height:105px;
+  width:120px;
+  padding:5px;
+}
+
+.chatIconText {
+  font-family:'gorditas';
+  margin-top:1px;
+}
+
+.chatWindows {
+  background-image:url("construction.png");
+  display:none;
 }

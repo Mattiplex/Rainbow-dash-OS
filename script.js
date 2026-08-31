@@ -107,6 +107,18 @@ MusicClose.addEventListener("click",function(){
   closeWindow(MusicWindow);
 })
 
+var ChatWindows = document.querySelector("#chatWindows")
+var ChatOpen = document.querySelector("#chatOpen")
+var ChatClose = document.querySelector("#chatClose")
+
+ChatOpen.addEventListener("click",function(){
+  openWindow(ChatWindows)
+})
+
+ChatClose.addEventListener("click",function(){
+  openWindow(ChatWindows)
+})
+
 var selectedIcon = undefined
 
 function selectIcon(element) {
