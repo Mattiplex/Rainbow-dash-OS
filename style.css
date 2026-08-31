@@ -183,6 +183,8 @@ position:absolute;
 z-index:10;
 display:none;
 flex-direction:column;
+top:95px;
+left:280px;
 }
 
 .notesheader {
@@ -460,7 +462,7 @@ height:25px;
   width:450px;
   height:300px;
   position:absolute;
-  top:170px;
+  top:95px;
   left:290px;
   padding:5px;
   border-radius:20px;
@@ -498,7 +500,7 @@ height:25px;
   position:absolute;
   width:680px;
   height:600px;
-  top:170px;
+  top:95px;
   left:300px;
   border-radius:20px;
   padding:5px;
