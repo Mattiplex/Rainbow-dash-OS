@@ -460,8 +460,8 @@ height:25px;
   width:450px;
   height:300px;
   position:absolute;
-  top:70px;
-  left:170px;
+  top:170px;
+  left:290px;
   padding:5px;
   border-radius:20px;
 }
@@ -498,8 +498,8 @@ height:25px;
   position:absolute;
   width:680px;
   height:600px;
-  top:70px;
-  left:180px;
+  top:170px;
+  left:300px;
   border-radius:20px;
   padding:5px;
 }
