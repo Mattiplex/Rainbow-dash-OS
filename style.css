@@ -462,7 +462,7 @@ height:25px;
 }
 
 .musicWindows {
-  background-color:bisque;
+  background-color:rgba(40,40,43);
   display:none;
   width:450px;
   height:300px;
@@ -474,8 +474,8 @@ height:25px;
 }
 
 .disk {
-width: 150px;
-height: 150px;
+width: 250px;
+height: 250px;
 object-fit: cover;
 mask-image: url(https://i.postimg.cc/3RYpcLqS/14.png);
 mask-size: 100%;
@@ -496,16 +496,20 @@ animation-iteration-count: infinite;
  
 /*-------MUSIC PLAYER BY GLENTHEMES-------*/
 #glenplayer02 {
-position:relative;
+position:absolute;
 display:flex;
-background: #C2C2C2;
+background-color:paleturquoise;
 padding: .2em;
-border: 3px solid;
+border: 3px ridge #F38BC8;
 border-style: inset;
 margin: auto;
 margin-top: 0.5em;
 margin-bottom: 0.5em;
 width:auto;
+height:fit-content;
+top:260px;
+left:10px;
+border-radius:20px;
 }
  
 #glenplayer02 a {text-decoration:none;}
@@ -531,9 +535,9 @@ font-family:futurefont;
  
 .sonata {
 margin-left:0.4em;
-font-family: futurefont ;
+font-family:futurefont;
 font-size:0.75em;
-color:#000; /* color of music note symbol */
+color:black; /* color of music note symbol */
 }
  
 .labeltext {
