@@ -3,6 +3,11 @@
 src: url(https://dl.dropbox.com/s/8p8mi5uzbekohv7/Starborn.ttf);
   font-family: starborn;}
 
+@font-face {
+  font-family:futurefont;
+  src :url(futurefont.otf)
+}
+
 
 #welcomescreen {
   position: absolute;
@@ -488,19 +493,6 @@ animation-iteration-count: infinite;
         from { transform: rotate(0deg) }
         to { transform: rotate(360deg) }
 } 
-
- /*music player style exp */
-
-@font-face {
-font-family: 'music';
-src: url(https://cdn.glitch.me/9bbfdfb3-4bfa-4c39-8743-5621c8b9df21/LL_RECOR.TTF);
-}
- 
-@font-face {
-font-family: Pixelated MS Sans Serif;
-src:url(ms_sans_serif.woff) format("woff");
-src:url(ms_sans_serif.woff2) format("woff2");
-}
  
 /*-------MUSIC PLAYER BY GLENTHEMES-------*/
 #glenplayer02 {
@@ -530,16 +522,16 @@ user-select:none;
 width:13px;
 font-size:18px;
 cursor:pointer;
-font-family: 'music';
+font-family:futurefont;
 }
  
-.playy, .pausee {font-family: 'music'; font-size: 1.1em; color: #F38BC8; -webkit-text-stroke: 0.5px #000; margin-top: -0.2em; margin-bottom: 0.1em; } /* color of play & pause buttons */
+.playy, .pausee {font-family:futurefont; font-size: 1.1em; color: #F38BC8; -webkit-text-stroke: 0.5px #000; margin-top: -0.2em; margin-bottom: 0.1em; } /* color of play & pause buttons */
  
 .pausee {display:none;}
  
 .sonata {
 margin-left:0.4em;
-font-family: Pixelated MS Sans Serif;
+font-family: futurefont ;
 font-size:0.75em;
 color:#000; /* color of music note symbol */
 }
