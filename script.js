@@ -466,6 +466,8 @@ var harmonia = document.getElementById("tune");
 }
 
 window.songstart = songstart; // addition to make it function
+window.Nextsong = nextSong;
+window.Pervsong = PervSong;
 
 $(document).ready(function(){
 var owari = document.getElementById("tune");
@@ -474,3 +476,41 @@ owari.onended = function() {
     $(".pausee").hide();
 };
 });
+
+//my custom addition 
+var  songs = [
+  "Cheel - Blue Dream (Original) - Free copyright music.mp3",
+  "Nyan Cat [original].mp3",
+];
+
+var currentSong = 0;
+
+function Nextsong() {
+  ++currentSong;
+  if (currentSong >= songs.length) {
+    currentSong = 0;
+  }
+
+  var harmonia = document.getElementById("tune");
+
+  harmonia.src=songs[CurrentSong];
+  harmonia.play();
+
+  $(".play").hide();
+  $(".pause")
+}
+
+function Pervsong() {
+  currentSong--;
+  if (currentSong < 0) {
+    currentSong = songs.length - 1;
+  }
+
+  var harmonia = document.getElementById("tune");
+
+  harmonia.src=songs[CurrentSong];
+  harmonia.play();
+
+  $(".play").hide();
+  $(".pause")
+}

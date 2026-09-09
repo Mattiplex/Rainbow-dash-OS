@@ -498,6 +498,7 @@ animation-iteration-count: infinite;
 #glenplayer02 {
 position:absolute;
 display:flex;
+justify-content:flex-start;
 background-color:paleturquoise;
 padding: .2em;
 border: 3px ridge #F38BC8;
@@ -505,7 +506,7 @@ border-style: inset;
 margin: auto;
 margin-top: 0.5em;
 margin-bottom: 0.5em;
-width:auto;
+width:fit-content;
 height:fit-content;
 top:260px;
 left:10px;
@@ -532,7 +533,41 @@ font-family:futurefont;
 .playy, .pausee {font-family:futurefont; font-size: 1.1em; color: #F38BC8; -webkit-text-stroke: 0.5px #000; margin-top: -0.2em; margin-bottom: 0.1em; } /* color of play & pause buttons */
  
 .pausee {display:none;}
+
+.nextsong {
+/* HTML: <div class="triangle"></div> */
+  --r:1px; /* border radius */
+  height: 14px;
+  margin-left:5px;
+  aspect-ratio: cos(30deg);
+  --_g:calc(tan(60deg)*var(--r)) left var(--r),#000 98%,#0000 101%;
+  mask:
+    conic-gradient(from 60deg at calc(3*var(--r)/2 - 100%),#000 60deg,#0000 0)
+     0 0/calc(100% - 3*var(--r)/2) 100% no-repeat,
+    radial-gradient(var(--r) at calc(100% - 2*var(--r)) 50%,#000 98%,#0000 101%),
+    radial-gradient(var(--r) at top    var(--_g)),
+    radial-gradient(var(--r) at bottom var(--_g));
+  clip-path: polygon(100% 50%,0 100%,0 0);
+  background: linear-gradient(45deg, #F38BC8);
+}
  
+.pervsong {
+  /* HTML: <div class="triangle"></div> */
+  --r:1px; /* border radius */
+  height: 14px;
+  margin-left:5px;  aspect-ratio: cos(30deg);
+  --_g:calc(tan(60deg)*var(--r)) right var(--r),#000 98%,#0000 101%;
+  mask:
+    conic-gradient(from 240deg at calc(200% - 3*var(--r)/2),#000 60deg,#0000 0)
+     100% 0/calc(100% - 3*var(--r)/2) 100% no-repeat,
+    radial-gradient(var(--r) at calc(2*var(--r)) 50%,#000 98%,#0000 101%),
+    radial-gradient(var(--r) at top    var(--_g)),
+    radial-gradient(var(--r) at bottom var(--_g));
+  clip-path: polygon(0 50%,100% 100%,100% 0);
+  background: linear-gradient(45deg, #F38BC8);
+}
+
+
 .sonata {
 margin-left:0.4em;
 font-family:futurefont;
