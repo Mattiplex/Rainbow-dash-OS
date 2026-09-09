@@ -466,8 +466,8 @@ var harmonia = document.getElementById("tune");
 }
 
 window.songstart = songstart; // addition to make it function
-window.Nextsong = nextSong;
-window.Pervsong = PervSong;
+window.Nextsong = Nextsong;
+window.Pervsong = Pervsong;
 
 $(document).ready(function(){
 var owari = document.getElementById("tune");
