@@ -501,8 +501,8 @@ function loadTrack(track_index) {
 	// Move to the next track if the current finishes playing
 	// using the 'ended' event
 	curr_track.addEventListener("ended", nextTrack);
-	// Apply a random background color
-	random_bg_color();
+
+	
 }
 // Function to reset all values to their default
 function resetValues() {
