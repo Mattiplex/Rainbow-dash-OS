@@ -497,6 +497,7 @@ animation-iteration-count: infinite;
 /*big ass style script*/
 
 
+
 body {
 	height: 100vh;
 	font-family: "Inter", serif;
@@ -513,7 +514,6 @@ body {
 	box-shadow: inset 10px 0px 6px -10px #ccc, inset -10px 0px 6px -10px #ccc,
 		inset 0px 10px 6px -10px #fff, inset 0px -10px 6px -10px #ccc;
 	padding: 12px;
-	cursor: move;
 }
 
 .stats {
@@ -547,7 +547,7 @@ body {
 }
 
 .seek_slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
+  -webkit-appearance:none;
   appearance: none;
   width: 6px;
   height: 16px;
@@ -567,10 +567,10 @@ body {
 	-moz-appearance: none;
 	appearance: none;
 	height: 3px;
-	background: #bbb;
+	background:#bbb;
 }
 
-.seek_slider::-webkit-slider-thumb,
+.seek_slider:-webkit-slider-thumb,
 .volume_slider::-webkit-slider-thumb {
 	cursor: pointer;
 }

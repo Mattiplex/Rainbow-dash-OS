@@ -24,6 +24,14 @@ function dragElement(elmnt) {
 
   function dragMouseDown(e) {
     e = e || window.event;
+
+    if (
+      e.target.closest(".seek_slider") ||
+      e.target.closest(".playpause-track") ||
+      e.target.closest(".next-track")||
+      e.target.closest(".prev-track")
+    ) {return;}
+  
     e.preventDefault();
     
     pos3 = e.clientX;
@@ -438,15 +446,6 @@ function slinkit(r, t) {
   r.appendChild(document.createTextNode(t.substring(e)));
 }
 
-window.playpauseTrack = playpauseTrack;
-window.nextTrack = nextTrack;
-window.prevTrack = prevTrack;
-window.seekto = seekTo;
-window.setvolume = setVolume;
-window.seekUpdate = seekUpdate;
-
-
-
 let now_playing = document.querySelector(".now-playing");
 let track_art = document.querySelector(".track-art");
 let track_name = document.querySelector(".track-name");
@@ -554,13 +553,14 @@ function prevTrack() {
 	playTrack();
 }
 
-function seekTo() {
-	// Calculate the seek position by the
+function seekTo() { if (!isNaN(curr_track.duration)) {
+  	// Calculate the seek position by the
 	// percentage of the seek slider
 	// and get the relative duration to the track
 	let seekto = curr_track.duration * (seek_slider.value / 100);
 	// Set the current track position to the calculated seek position
 	curr_track.currentTime = seekto;
+}
 }
 
 function setVolume() {
@@ -600,3 +600,9 @@ function seekUpdate() {
 }
 // Load the first track in the tracklist
 loadTrack(track_index);
+
+playpause_btn.addEventListener("click",playpauseTrack);
+next_btn.addEventListener("click",nextTrack);
+prev_btn.addEventListener("click",prevTrack);
+seek_slider.addEventListener("change",seekTo);
+
