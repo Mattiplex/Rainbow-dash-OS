@@ -606,3 +606,26 @@ next_btn.addEventListener("click",nextTrack);
 prev_btn.addEventListener("click",prevTrack);
 seek_slider.addEventListener("change",seekTo);
 
+//realtime graphic EQ Visualizer
+(function() {
+
+const audiocontext = new AudioContext();
+const audiosource = audiocontext.createMediaElementSource(curr_track);
+const analyser = audiocontext.createAnalyser();
+audiosource.connext(analyser);
+analyser.connect(audiocontext.destination);
+
+const frequencyData = new uint8Array(analyser.frequencyBinCount);
+analyser.getByteFrequencyData(frequencyData);
+console.log("frequencyData", frequencyData);
+
+const eqvisualiser = document.querySelect("eq-visualiser");
+
+for( let i = 0 ; i < frequencyData.length; i++) {
+  const bar = document.createElement("DIV");
+  bar.setAttribute("id","bar" + i);
+  bar.setAttribute("class","eq-bar");
+  eqvisualiser.appendChild(bar);
+}
+
+}())
