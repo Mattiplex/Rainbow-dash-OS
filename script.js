@@ -612,7 +612,7 @@ seek_slider.addEventListener("change",seekTo);
 const audiocontext = new AudioContext();
 const audiosource = audiocontext.createMediaElementSource(curr_track);
 const analyser = audiocontext.createAnalyser();
-audiosource.connext(analyser);
+audiosource.connect(analyser);
 analyser.connect(audiocontext.destination);
 
 const frequencyData = new uint8Array(analyser.frequencyBinCount);
