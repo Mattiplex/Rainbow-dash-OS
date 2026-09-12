@@ -523,6 +523,7 @@ function playTrack() {
 	isPlaying = true;
 	// Replace icon with the pause icon
 	playpause_btn.innerHTML = '<i class="fa fa-pause fa-lg"></i>';
+  audiocontext.resume();
 }
 
 function pauseTrack() {
@@ -615,11 +616,11 @@ const analyser = audiocontext.createAnalyser();
 audiosource.connect(analyser);
 analyser.connect(audiocontext.destination);
 
-const frequencyData = new uint8Array(analyser.frequencyBinCount);
+const frequencyData = new Uint8Array(analyser.frequencyBinCount);
 analyser.getByteFrequencyData(frequencyData);
 console.log("frequencyData", frequencyData);
 
-const eqvisualiser = document.querySelect("eq-visualiser");
+const eqvisualiser = document.querySelector("eq-visualiser");
 
 for( let i = 0 ; i < frequencyData.length; i++) {
   const bar = document.createElement("DIV");
@@ -628,4 +629,4 @@ for( let i = 0 ; i < frequencyData.length; i++) {
   eqvisualiser.appendChild(bar);
 }
 
-}())
+})();
