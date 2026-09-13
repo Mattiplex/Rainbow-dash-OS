@@ -620,7 +620,7 @@ const frequencyData = new Uint8Array(analyser.frequencyBinCount);
 analyser.getByteFrequencyData(frequencyData);
 console.log("frequencyData", frequencyData);
 
-const eqvisualiser = document.querySelector("eq-visualiser");
+const eqvisualiser = document.querySelector(".eq-visualiser");
 
 for( let i = 0 ; i < frequencyData.length; i++) {
   const bar = document.createElement("DIV");
@@ -628,5 +628,26 @@ for( let i = 0 ; i < frequencyData.length; i++) {
   bar.setAttribute("class","eq-bar");
   eqvisualiser.appendChild(bar);
 }
+
+function renderFrame() {
+
+ analyser.getByteFrequencyData(frequencyData)
+
+ for( let i = 0 ; i < frequencyData.length; i++){
+
+  const fd =frequencyData[i];
+  const bar = document.querySelector("#bar" + i)
+  if( !bar) {
+    continue;
+  }
+
+const barHeight =math.max(4, fd || 0);
+  bar.style.height = barHeight + "px";
+
+ }
+
+}
+
+renderFrame();
 
 })();
