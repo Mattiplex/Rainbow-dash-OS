@@ -607,10 +607,13 @@ next_btn.addEventListener("click",nextTrack);
 prev_btn.addEventListener("click",prevTrack);
 seek_slider.addEventListener("change",seekTo);
 
+// audiocontext linking both the player and EQ visualizer
+const audiocontext = new AudioContext();
+
 //realtime graphic EQ Visualizer
 (function() {
 
-const audiocontext = new AudioContext();
+
 const audiosource = audiocontext.createMediaElementSource(curr_track);
 const analyser = audiocontext.createAnalyser();
 audiosource.connect(analyser);
@@ -641,7 +644,7 @@ function renderFrame() {
     continue;
   }
 
-const barHeight =math.max(4, fd || 0);
+const barHeight =Math.max(4, fd || 0);
   bar.style.height = barHeight + "px";
 
  }
