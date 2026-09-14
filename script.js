@@ -644,7 +644,7 @@ function renderFrame() {
     continue;
   }
 
-const barHeight =Math.max(4, fd || 0);
+const barHeight =Math.max(4, fd || 60);
   bar.style.height = barHeight + "px";
 
  }
@@ -652,5 +652,10 @@ const barHeight =Math.max(4, fd || 0);
 }
 
 renderFrame();
+
+setInterval(function() {
+console.log("tick")
+  renderFrame();
+},1000); 
 
 })();

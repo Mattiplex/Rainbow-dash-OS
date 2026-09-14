@@ -634,20 +634,22 @@ i.fa-pause,
 
 .eq-visualiser {
   background-color:red;
-  width:80px;
+  width:160px;
   height:60px;
   position:absolute;
   bottom:120px;
-  right:30px;
+  right:16px;
   text-align:center;
+ 
 }
 
 .eq-bar {
   display:inline-block;
   margin:0px 2px;
   width:10px;
-  height:60px;
+  height:10px;
   background-color:rgba(0,234,216);
+  vertical-align:bottom;
 }
 
 
