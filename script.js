@@ -466,7 +466,7 @@ let curr_track = document.createElement("audio");
 // Define the list of tracks that have to be played
 let track_list = [
 	{
-		name: "NYan Cat [original]",
+		name: "Nyan Cat [original]",
 		artist: "PRguitarman, Daniwell",
 		image:
 			"https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGg3emlmOWs4djVxaHBucnBwZGxud3ZnaG5seW0zbG5pNGxuZnhxeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BSx6mzbW1ew7K/giphy.gif",
@@ -481,7 +481,7 @@ let track_list = [
   {
     name: "Smile Song (remix) ",
     artist: "The living Tombstone, Daniel Ingram",
-    image: "Smile Song.png",
+    image: "https://i.ytimg.com/vi/2okSis_wtls/maxresdefault.jpg",
     path: "TombstoneSmileRemix-Final.mp3"
   },
   {
