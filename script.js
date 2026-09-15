@@ -470,7 +470,7 @@ let track_list = [
 		artist: "PRguitarman, Daniwell",
 		image:
 			"https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGg3emlmOWs4djVxaHBucnBwZGxud3ZnaG5seW0zbG5pNGxuZnhxeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BSx6mzbW1ew7K/giphy.gif",
-		path: "https://ia802806.us.archive.org/22/items/NyanCatoriginal/Nyan%20Cat%20%5Boriginal%5D.mp3" //"Nyan Cat [original].mp3"
+		path: "Nyan Cat [original].mp3"
 	},
 	{
 		name: "Blue dream",
