@@ -464,8 +464,8 @@ height:25px;
 .musicWindows {
   background-color:rgba(40,40,43);
   display:none;
-  width:450px;
-  height:340px;
+  width:540px;
+  height:380px;
   position:absolute;
   top:95px;
   left:290px;
@@ -514,6 +514,9 @@ body {
 	box-shadow: inset 10px 0px 6px -10px #ccc, inset -10px 0px 6px -10px #ccc,
 		inset 0px 10px 6px -10px #fff, inset 0px -10px 6px -10px #ccc;
 	padding: 12px;
+  position:absolute;
+  bottom:1px;
+  right:10px;
 }
 
 #miniplay2 {
@@ -527,8 +530,8 @@ body {
 		inset 0px 10px 6px -10px #fff, inset 0px -10px 6px -10px #ccc;
 	padding: 12px;
   position:absolute;
-  top:265px;
-  left:10px;
+  bottom:20px;
+  left:20px;
 }
 
 .stats {
@@ -637,8 +640,8 @@ i.fa-pause,
   width:160px;
 
   position:absolute;
-  bottom:120px;
-  right:16px;
+  bottom:80px;
+  right:30px;
   text-align:center;
  
 }
@@ -646,9 +649,8 @@ i.fa-pause,
 .eq-bar {
   display:inline-block;
   margin:0px 2px;
-  width:4px;
+  width: 3px;
   background-color:rgba(0,234,216);
-
   
 }
 

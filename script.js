@@ -470,14 +470,26 @@ let track_list = [
 		artist: "PRguitarman, Daniwell",
 		image:
 			"https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGg3emlmOWs4djVxaHBucnBwZGxud3ZnaG5seW0zbG5pNGxuZnhxeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BSx6mzbW1ew7K/giphy.gif",
-		path: "Nyan Cat [original].mp3"
+		path: "https://ia802806.us.archive.org/22/items/NyanCatoriginal/Nyan%20Cat%20%5Boriginal%5D.mp3" //"Nyan Cat [original].mp3" 
 	},
 	{
 		name: "Blue dream",
 		artist: "Cheel",
 		image:"https://cdn-images.dzcdn.net/images/cover/65626324e93cc9d56070464d230aaf8e/0x1900-000000-80-0-0.jpg",
 		path: "Cheel - Blue Dream (Original) - Free copyright music.mp3"
-	}
+	},
+  {
+    name: "Smile Song (remix) ",
+    artist: "The living Tombstone, Daniel Ingram",
+    image: "Smile Song.png",
+    path: "TombstoneSmileRemix-Final.mp3"
+  },
+  {
+    name:"Eurobeat Brony Discord (remix)",
+    artist: "The Living TombStone, Odyssey Eurobeat",
+    image: "https://images.genius.com/b418baa7b6065a4329bd4c43bee8f7e2.1000x1000x1.png",
+    path:"TombstoneDiscordRemix-Final.mp3"
+  }
 ];
 //
 //
@@ -613,7 +625,7 @@ const audiocontext = new AudioContext();
 //realtime graphic EQ Visualizer
 (function() {
 
-const Num_of_Bars = 20;
+const Num_of_Bars = 22;
 
 const audiosource = audiocontext.createMediaElementSource(curr_track);
 const analyser = audiocontext.createAnalyser();
@@ -639,7 +651,7 @@ function renderFrame() {
 
  for( let i = 0 ; i < Num_of_Bars; i++){
 
-  const index =(i+10)*2
+  const index = (i+20)*2
   const fd =frequencyData[i];
   const bar = document.querySelector("#bar" + i)
   if( !bar) {
