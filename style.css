@@ -635,7 +635,7 @@ i.fa-pause,
 .eq-visualiser {
   background-color:red;
   width:160px;
-  height:60px;
+
   position:absolute;
   bottom:120px;
   right:16px;
@@ -646,10 +646,10 @@ i.fa-pause,
 .eq-bar {
   display:inline-block;
   margin:0px 2px;
-  width:10px;
-  height:10px;
+  width:4px;
   background-color:rgba(0,234,216);
-  vertical-align:bottom;
+
+  
 }
 
 

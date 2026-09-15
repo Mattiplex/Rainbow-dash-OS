@@ -470,7 +470,7 @@ let track_list = [
 		artist: "PRguitarman, Daniwell",
 		image:
 			"https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGg3emlmOWs4djVxaHBucnBwZGxud3ZnaG5seW0zbG5pNGxuZnhxeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BSx6mzbW1ew7K/giphy.gif",
-		path: "Nyan Cat [original].mp3"
+		path: "https://ia802806.us.archive.org/22/items/NyanCatoriginal/Nyan%20Cat%20%5Boriginal%5D.mp3" //"Nyan Cat [original].mp3"
 	},
 	{
 		name: "Blue dream",
@@ -613,6 +613,7 @@ const audiocontext = new AudioContext();
 //realtime graphic EQ Visualizer
 (function() {
 
+const Num_of_Bars = 20;
 
 const audiosource = audiocontext.createMediaElementSource(curr_track);
 const analyser = audiocontext.createAnalyser();
@@ -625,7 +626,7 @@ console.log("frequencyData", frequencyData);
 
 const eqvisualiser = document.querySelector(".eq-visualiser");
 
-for( let i = 0 ; i < frequencyData.length; i++) {
+for( let i = 0 ; i < Num_of_Bars; i++) {
   const bar = document.createElement("DIV");
   bar.setAttribute("id","bar" + i);
   bar.setAttribute("class","eq-bar");
@@ -636,26 +637,27 @@ function renderFrame() {
 
  analyser.getByteFrequencyData(frequencyData)
 
- for( let i = 0 ; i < frequencyData.length; i++){
+ for( let i = 0 ; i < Num_of_Bars; i++){
 
+  const index =(i+10)*2
   const fd =frequencyData[i];
   const bar = document.querySelector("#bar" + i)
   if( !bar) {
     continue;
   }
 
-const barHeight =Math.max(4, fd || 60);
+const barHeight =Math.max(4, fd || 0);
   bar.style.height = barHeight + "px";
 
  }
-
+window.requestAnimationFrame(renderFrame)
 }
 
 renderFrame();
 
-setInterval(function() {
-console.log("tick")
-  renderFrame();
-},1000); 
+//setInterval(function() {
+//console.log("tick")
+//  renderFrame();
+//},1000); 
 
 })();
