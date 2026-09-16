@@ -491,7 +491,7 @@ let track_list = [
   },
   {
     name:"No aka (just a bit crazy)",
-    artist:"Vim!, Edd Gould",
+    artist:"V i m!, Edd Gould",
     image:"https://static.wikia.nocookie.net/eddsworld/images/9/9d/AnimationJustABitCrazy3.gif/revision/latest?format=original",
     path:"vim - No1.mp3"
   }

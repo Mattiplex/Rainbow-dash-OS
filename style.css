@@ -573,6 +573,14 @@ left:50px;
 	border-radius: 10px;
 }
 
+.seek_slider::-moz-range-thumb {
+  width: 6px;
+  height: 16px;
+  background: rgba(134, 250, 242);
+	border: 2px solid black;
+	border-radius: 10px;
+}
+
 .seek_slider,
 .volume_slider {
 	width: 100%;
