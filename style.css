@@ -477,7 +477,7 @@ height:25px;
 width: 250px;
 height: 250px;
 object-fit: cover;
-mask-image: url(https://i.postimg.cc/3RYpcLqS/14.png);
+mask-image: url(https://i.postimg.cc/3RYpcLqS/14.png); 
 mask-size: 100%;
 mask-repeat: no-repeat;
 mask-position: center;
@@ -508,7 +508,7 @@ left:50px;
 	height: 90px;
 	font-family: futurefont, serif;
 	background:  rgba(34,34,34);
-	border: 1px solid #d6d6d6;
+	border: 1px solid rgba(134, 250, 242);
 	border-radius: 0.625rem;
 	box-shadow: inset 10px 0px 6px -10px #ccc, inset -10px 0px 6px -10px #ccc,
 		inset 0px 10px 6px -10px #fff, inset 0px -10px 6px -10px #ccc;
@@ -523,7 +523,7 @@ left:50px;
 	height: 50px;
 	font-family: futurefont , serif;
 	background: rgba(34,34,34);
-	border: 1px solid #d6d6d6;
+	border: 1px solid rgba(134,250,242);
 	border-radius: 0.625rem;
 	box-shadow: inset 10px 0px 6px -10px #ccc, inset -10px 0px 6px -10px #ccc,
 		inset 0px 10px 6px -10px #fff, inset 0px -10px 6px -10px #ccc;
@@ -558,7 +558,7 @@ left:50px;
 .current-time,
 .total-duration {
 	color: rgba(48,231,237);
-	font-family: "Inter", serif;
+	font-family: futurefont , serif;
 	font-size: 12px;
 	padding: 4px;
 }
@@ -593,10 +593,37 @@ left:50px;
 	cursor: pointer;
 }
 
+@keyframes slide {
+0% {
+background-position-x: 0%;
+}
+100% {
+background-position-x: 300vw;
+}
+}
+
 .now-playing,
 .track-name,
 .track-artist {
-	color:rgba(134,250,242);
+	font-weight: 500;
+	line-height: 1.3;
+background-size: 300vw 300vw;
+
+ 
+margin: 0;
+position: relative;
+text-align: -webkit-center;
+font-size: 13px;
+background: repeating-linear-gradient(-45deg, rgba(0, 27, 135)0%,rgba(0, 88, 179)20%,rgba(0, 166, 215)40%,rgba(48, 231, 237)60%,rgba(134, 250, 242)80%,rgba(0, 27, 135)100%);
+ 
+animation: 'slide' 30s infinite linear forwards;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+
+.now-playing,
+.track-name,
+.track-artist {
 	font-size: 13px;
 	font-weight: 500;
 	line-height: 1.3;
@@ -620,6 +647,8 @@ left:50px;
 	opacity: 0.5;
 	color: rgba(134,250,242);
 	transition: opacity 0.2s;
+  fill:rgba(134,250,242);
+  stroke:rgba(134, 250, 242);
 }
 
 .playpause-track:hover,
@@ -636,7 +665,7 @@ i.fa-pause,
 }
 
 .eq-visualiser {
-  width:160px;
+  width:182px;
   position:absolute;
   bottom:130px;
   right:30px;

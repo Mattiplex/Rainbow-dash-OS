@@ -468,9 +468,8 @@ let track_list = [
 	{
 		name: "Nyan Cat [original]",
 		artist: "PRguitarman, Daniwell",
-		image:
-			"https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGg3emlmOWs4djVxaHBucnBwZGxud3ZnaG5seW0zbG5pNGxuZnhxeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BSx6mzbW1ew7K/giphy.gif",
-		path: "https://ia802806.us.archive.org/22/items/NyanCatoriginal/Nyan%20Cat%20%5Boriginal%5D.mp3" //"Nyan Cat [original].mp3" 
+		image:"https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGg3emlmOWs4djVxaHBucnBwZGxud3ZnaG5seW0zbG5pNGxuZnhxeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BSx6mzbW1ew7K/giphy.gif",
+		path: "Nyan Cat [original].mp3" 
 	},
 	{
 		name: "Blue dream",
@@ -489,6 +488,12 @@ let track_list = [
     artist: "The Living TombStone, Odyssey Eurobeat",
     image: "https://images.genius.com/b418baa7b6065a4329bd4c43bee8f7e2.1000x1000x1.png",
     path:"TombstoneDiscordRemix-Final.mp3"
+  },
+  {
+    name:"No aka (just a bit crazy)",
+    artist:"Vim!, Edd Gould",
+    image:"https://static.wikia.nocookie.net/eddsworld/images/9/9d/AnimationJustABitCrazy3.gif/revision/latest?format=original",
+    path:"vim - No1.mp3"
   }
 ];
 //
@@ -625,7 +630,7 @@ const audiocontext = new AudioContext();
 //realtime graphic EQ Visualizer
 (function() {
 
-const Num_of_Bars = 22;
+const Num_of_Bars = 26;
 
 const audiosource = audiocontext.createMediaElementSource(curr_track);
 const analyser = audiocontext.createAnalyser();
@@ -651,7 +656,7 @@ function renderFrame() {
 
  for( let i = 0 ; i < Num_of_Bars; i++){
 
-  const index = (i+20)*2
+  const index = (i+40)*2
   const fd =frequencyData[i];
   const bar = document.querySelector("#bar" + i)
   if( !bar) {
