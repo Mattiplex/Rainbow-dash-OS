@@ -457,6 +457,7 @@ let seek_slider = document.querySelector(".seek_slider");
 let volume_slider = document.querySelector(".volume_slider");
 let curr_time = document.querySelector(".current-time");
 let total_duration = document.querySelector(".total-duration");
+let disk_art = document.querySelector(".disk-art")
 // Specify globally used values
 let track_index = 0;
 let isPlaying = false;
@@ -507,6 +508,7 @@ function loadTrack(track_index) {
 	curr_track.load();
 	// Update details of the track
 	track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
+  disk_art.src = track_list[track_index].image;
 	track_name.textContent = track_list[track_index].name;
 	track_artist.textContent = track_list[track_index].artist;
 	now_playing.textContent =
