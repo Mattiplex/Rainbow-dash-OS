@@ -473,6 +473,15 @@ height:25px;
   border-radius:20px;
 }
 
+.djpon3 {
+  background-size:cover;
+  width:150px;
+  height:180px;
+  position: absolute;
+  top: 60px;
+  left: 370px;
+}
+
 .diskpos {
 background-color: aqua;
 }
