@@ -680,3 +680,7 @@ renderFrame();
 //},1000); 
 
 })();
+
+chattable.initialize ({
+  stylesheet: "style.css"
+})
