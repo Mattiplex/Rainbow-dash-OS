@@ -682,5 +682,5 @@ renderFrame();
 })();
 
 chattable.initialize ({
-  stylesheet: "style.css"
+  stylesheet: "chattable.css"
 })

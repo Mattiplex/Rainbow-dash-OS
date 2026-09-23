@@ -748,9 +748,8 @@ i.fa-pause,
 }
 
 .chatWindows {
-  background-image:url("construction.png");
   background-size:cover;
-  background-color:rgba(239,111,47,0.75);
+  background-color:#ffc360;
   display:none;
   position:absolute;
   width:680px;
@@ -766,156 +765,16 @@ i.fa-pause,
   height:500px;
 }
 
-#background {
-    background: url(https://i.pinimg.com/originals/8a/27/c5/8a27c59a7f263283e25401ea49e43a7b.jpg);
-    background-size: 150px 150px;
-    background-attachment: local;
-    background-repeat: repeat;
+.gamewindows {
+  background-image:url();
+  background-size:cover;
+  display:none;
+  position:absolute;
+  width:900px;
+  height:500px;
+  top:95px;
+  left:300px;
+  border-radius:20px;
+  padding:5px;
 }
 
-#settingsMenu {
-  background-color: #FFF;
-}
-
-a  {
-    color: #88F;
-}
-
-#top_banner {
-    font-family:'gorditas';
-    font-weight: bolder !important;
-    background: #AAF;
-    background: linear-gradient(0deg,  #ff7e26 0%, #ff9c59 50% , #fff4d6 100%);
-    width: calc(100% - 2px);
-    border: solid 1px #99E;
-    box-shadow: 0 0 2px #FFF, 0 0 2px #FFF, 0 0 2px #FFF, 0 0 2px #FFF, 0 0 1px #FFF, 0 3px 4px #005;
-    text-shadow: 1px 1px 2px #005;
-    position: relative;
-    z-index: 4;
-}
-
-.msgBody {
-  color:black;
-  font-family: winkle;
-}
-
-.senderInfo {
-  font-family: winkle;
-}
-
-.allMessages {
-    background-color: #fff4d6;
-    background-size: 100px 100px;
-    box-shadow: 0 0 4px #FFF, 0 0 4px #FFF, 0 0 4px #FFF, 0 0 4px #FFF, 0 0 4px #FFF, 0 3px 4px #005;
-    border: 1px solid #ff7e26;
-    border-radius: 8px;
-    margin: 0 20px 0 20px;
-    position: relative;
-}
-.allMessages.containsOnlyEmojis .emoji {
-    height: 50px;
-}
-.msgWrapper:has(.pm) {
-    padding-top: 26px;
-}
-.allMessages.pm {
-    border-color: #F55;
-}
-.allMessages.pm:after {
-    content: "ouuuu secret message";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #F55;
-    color: #FFF;
-    height: 16px;
-    padding: 5px;
-    position: absolute;
-    right: 5vw;
-    bottom: 100%;
-    z-index: 5;
-    border-radius: 5px 5px 0 0;
-}
-.msgWrapper + .msgWrapper {
-    margin-top: 25px;
-    margin-bottom: 15px;
-}
-#timestamp {
-    font-size: 8pt;
-    margin-top: 10px !important;
-    padding-left: 30px;
-}
-#input, #nameEntry {
-    background-color: #FFF;
-    border-radius: 0;
-    border-top: 1px solid #AAF;
-    font-family: 'gorditas';
-}
-#name {
-    background-color: #FFF;
-    border-radius: 0;
-    border: solid 1px #88F;
-    padding: 2px;
-    font-family: starborn;
-}
-#settings:hover {
-    filter: drop-shadow(0 0 3px #FFF) drop-shadow(0 0 3px #FFF) drop-shadow(0 0 3px #FFF);
-    transform: rotate(180deg);
-}
-#settings {
-    filter: drop-shadow(0 0 1px #FFF) drop-shadow(0 0 1px #FFF) drop-shadow(0 0 1px #FFF);
-    transition: all 250ms linear;
-}
-#emojiTrayToggle {
-    height: 15px;
-    width: 15px;
-    padding: 6px;
-    margin-top: 3px;
-    margin-left: 3px;
-    background-image: url(/media/pixel-emoji.webp) !important;
-    opacity: 0.5;
-}
-
-#emojiTray {
-  background-color: #ff9c59;
-}
-
-#input {
-  background-color: #ff9c59;
-  font-family: winkle;
-  color: #fff4d6;
-}
-
-#textinput {
-  font-family:winkle;
-}
-
-#is_typing {
-    filter: drop-shadow(0 0 1px #FFF) drop-shadow(0 0 1px #FFF) drop-shadow(0 0 1px #FFF);
-    background-color: #FFF;
-    border: solid 1px #AAF;
-    border-radius: 3px;
-    left: unset;
-    right: 10px;
-    bottom: 27px;
-    overflow: visible;
-}
-#is_typing:hover::after {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    content: "Someone is typing";
-    font-size: 10pt;
-    position: fixed;
-    right: 35px;
-    bottom: 0;
-    width: 50vw;
-    color: #000;
-    z-index: 100000;
-}
-#is_typing > span {
-    background-color: #AAF;
-    border-radius: 0;
-    height: 2px;
-    width: 2px;
-}
