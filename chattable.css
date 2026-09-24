@@ -1,6 +1,6 @@
 #background {
     background: url(https://i.pinimg.com/originals/8a/27/c5/8a27c59a7f263283e25401ea49e43a7b.jpg);
-    background-size: 150px 150px;
+    background-size: 250px 250px;
     background-attachment: local;
     background-repeat: repeat;
 }
@@ -77,11 +77,15 @@ a  {
     margin-top: 10px !important;
     padding-left: 30px;
 }
+#input:empty::before {
+    font-family:winkle;
+}
+
 #input, #nameEntry {
     background-color: #FFF;
     border-radius: 0;
     border-top: 1px solid #AAF;
-    font-family: 'gorditas';
+    font-family: starborn;
 }
 #name {
     background-color: #FFF;
@@ -153,5 +157,5 @@ a  {
 }
 
 :root {
-  --notification-sfx: "mlp-squee.mp3";
+  --notification-sfx: url(mlp-squee.mp3);
 }
