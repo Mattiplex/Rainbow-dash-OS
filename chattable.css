@@ -132,7 +132,7 @@ a  {
 #replyBanner {
 font-family:'nikyukyu';
 font-weight: bold;
-color:#FFF496;
+color:#FFF;
 }
 
 #settings:hover {
@@ -164,7 +164,7 @@ color:#FFF496;
 }
 
 #textinput {
-  font-family:winkle;
+  font-family:'nikyukyu';
   font-weight: bold;
 }
 
