@@ -1,3 +1,17 @@
+@font-face {
+src: url(https://dl.dropbox.com/s/8p8mi5uzbekohv7/Starborn.ttf);
+  font-family: starborn;}
+
+@font-face {
+src: url(https://dl.dropbox.com/s/mes7b666uvig5wc/Winkle-Regular.otf);
+font-family: winkle;
+}
+
+@font-face {
+font-family:'nikyukyu';
+src: url(https://dl.dropbox.com/s/tj1p07o8xlthc3x/NIKUKYU.ttf);
+}
+
 #background {
     background: url(https://i.pinimg.com/originals/8a/27/c5/8a27c59a7f263283e25401ea49e43a7b.jpg);
     background-size: 250px 250px;
@@ -7,6 +21,19 @@
 
 #settingsMenu {
   background-color: #FFF;
+  font-family: 'nikyukyu';
+}
+
+#save {
+    font-family:'nikyukyu';
+}
+
+#closeSettingBtn {
+    font-family: 'nikyukyu';
+}
+
+#account {
+ font-family: 'nikyukyu';
 }
 
 a  {
@@ -14,7 +41,7 @@ a  {
 }
 
 #top_banner {
-    font-family:'gorditas';
+    font-family: 'nikyukyu';
     font-weight: bolder !important;
     background: #AAF;
     background: linear-gradient(0deg,  #ff7e26 0%, #ff9c59 50% , #fff4d6 100%);
@@ -28,11 +55,16 @@ a  {
 
 .msgBody {
   color:black;
-  font-family: winkle;
+  font-family: 'nikyukyu';
+  font-weight: bold;
 }
 
 .senderInfo {
-  font-family: winkle;
+  font-family:'nikyukyu';
+}
+
+#scrollToBottom {
+    font-family: 'nikyukyu';
 }
 
 .allMessages {
@@ -54,6 +86,7 @@ a  {
     border-color: #F55;
 }
 .allMessages.pm:after {
+    font-family:'nikyukyu';
     content: "ouuuu secret message";
     display: flex;
     align-items: center;
@@ -73,6 +106,7 @@ a  {
     margin-bottom: 15px;
 }
 #timestamp {
+    font-family: winkle;
     font-size: 8pt;
     margin-top: 10px !important;
     padding-left: 30px;
@@ -85,15 +119,22 @@ a  {
     background-color: #FFF;
     border-radius: 0;
     border-top: 1px solid #AAF;
-    font-family: starborn;
+    font-family: 'nikyukyu';
 }
 #name {
     background-color: #FFF;
     border-radius: 0;
     border: solid 1px #88F;
     padding: 2px;
-    font-family: starborn;
+    font-family: 'nikyukyu';
 }
+
+#replyBanner {
+font-family:'nikyukyu';
+font-weight: bold;
+color:#FFF496;
+}
+
 #settings:hover {
     filter: drop-shadow(0 0 3px #FFF) drop-shadow(0 0 3px #FFF) drop-shadow(0 0 3px #FFF);
     transform: rotate(180deg);
@@ -124,6 +165,7 @@ a  {
 
 #textinput {
   font-family:winkle;
+  font-weight: bold;
 }
 
 #is_typing {
@@ -157,5 +199,5 @@ a  {
 }
 
 :root {
-  --notification-sfx: url(mlp-squee.mp3);
+  --notification-sfx: https://files.catbox.moe/xe67hk.mp3;
 }
