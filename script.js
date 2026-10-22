@@ -10,7 +10,8 @@ setInterval(updatetime, 1000);
 dragElement(document.getElementById("welcomescreen"));
 dragElement(document.getElementById("noteswindows"));
 dragElement(document.getElementById("musicWindows"));
-dragElement(document.getElementById("chatWindows"))
+dragElement(document.getElementById("chatWindows"));
+dragElement(document.getElementById("gameWindows"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -126,6 +127,18 @@ ChatOpen.addEventListener("click",function(){
 
 ChatClose.addEventListener("click",function(){
   closeWindow(ChatWindows)
+})
+
+var GameWindows = document.querySelector("#gameWindows")
+var GameOpen = document.queryselector("#gameOpen")
+var GameClose = document.querySelector("#gameClose")
+
+GameOpen.addEventListener("click",function(){
+  openWindow(GameWindows)
+})
+
+GameClose.addEventListener("click",function(){
+  closeWindow(GameWindows)
 })
 
 var selectedIcon = undefined

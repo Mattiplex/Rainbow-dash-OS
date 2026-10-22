@@ -735,7 +735,7 @@ i.fa-pause,
   color:rgba(250,245,171)
 }
 
-.happyJack {
+.game {
   height:105px;
   width:120px;
   padding:5px 5px 0px 5px;
@@ -765,8 +765,34 @@ i.fa-pause,
   height:500px;
 }
 
+.gameOpen {
+background-color:rgba(135,206,250,0.85);
+  height:fit-content;
+  width:fit-content;
+  margin-top:-10px;
+  border-radius:20px;
+}
+
+.gameIcon {
+  text-align:center;
+  color:rgba(250,245,171)
+}
+
+.dashie{
+  height:105px;
+  width:120px;
+  padding:5px 5px 0px 5px;
+}
+
+.gameIconText {
+  font-family:'gorditas';
+  margin-top:1px;
+  height:25px;
+}
+
+
 .gamewindows {
-  background-image:url();
+  background-image:url("construction.png");
   background-size:cover;
   display:none;
   position:absolute;
