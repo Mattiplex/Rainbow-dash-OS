@@ -130,7 +130,7 @@ ChatClose.addEventListener("click",function(){
 })
 
 var GameWindows = document.querySelector("#gameWindows")
-var GameOpen = document.queryselector("#gameOpen")
+var GameOpen = document.querySelector("#gameOpen")
 var GameClose = document.querySelector("#gameClose")
 
 GameOpen.addEventListener("click",function(){
@@ -297,7 +297,6 @@ function closeNoteDialog() {
 window.openNoteDialog = openNoteDialog;
 window.closeNoteDialog = closeNoteDialog;
 window.deleteNote = deleteNote;
-window.
 
 
 document.addEventListener('DOMContentLoaded',function() {
