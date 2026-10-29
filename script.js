@@ -769,17 +769,17 @@ function openGame() {
 // context.fillRect(pinkie.x,pinkie.y,pinkie.width,pinkie.height);
 
 pinkieRightImg = new Image();
-pinkieRightImg.src = "Resource & Stuff/pinkie right.png"
+pinkieRightImg.src = "Resources & Stuff/pinkie right.png"
 pinkie.img = pinkieRightImg;
 pinkieRightImg.onload = function() {
   context.drawImage(pinkie.img,pinkie.x,pinkie.y,pinkie.width,pinkie.height);
 }
 
 pinkieLeftImg = new Image();
-pinkieLeftImg.src = "Resource & Stuff/pinkie left.png"
+pinkieLeftImg.src = "Resources & Stuff/pinkie left.png"
 
 platformImg = new Image();
-platformImg.src = "Resource & Stuff/cloud platform.png"
+platformImg.src = "Resources & Stuff/cloud platform.png"
 
 velocityY = initialVelocityY;
 placePlatforms();
