@@ -839,7 +839,6 @@ font-size: x-large;
 .gamedesc {
 color:black;
 font-family:winkle;
-font-size: large;
 position:absolute;
 left:380px;
 top:170px;
@@ -857,6 +856,7 @@ top:250px;
 .gamedesc2 {
 color:black;
 font-family:winkle;
+font-size:larger;
 position:absolute;
 left:380px;
 top:270px;
