@@ -135,6 +135,7 @@ var GameClose = document.querySelector("#gameClose")
 
 GameOpen.addEventListener("click",function(){
   openWindow(GameWindows)
+
 })
 
 GameClose.addEventListener("click",function(){
@@ -458,6 +459,8 @@ function slinkit(r, t) {
   r.appendChild(document.createTextNode(t.substring(e)));
 }
 
+// music player functions 
+
 let now_playing = document.querySelector(".now-playing");
 let track_art = document.querySelector(".track-art");
 let track_name = document.querySelector(".track-name");
@@ -507,6 +510,18 @@ let track_list = [
     artist:"V i m!, Edd Gould",
     image:"https://static.wikia.nocookie.net/eddsworld/images/9/9d/AnimationJustABitCrazy3.gif/revision/latest?format=original",
     path:"vim - No1.mp3"
+  },
+  {
+    name:"Donuts",
+    artist:"2SCOOPS",
+    image:"https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjM2ODltbnY0dWt4OWJzd3A2cnU5NWRyamJibW9hdWQycWttcDZ6dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/i5Lr0JcMsxPTzrNGPP/giphy.gif",
+    path:"Music/2SCOOPS - Donuts [NCS Release].mp3"
+  },
+  {
+    name:"Everything",
+    artist:"Diamond Eyes",
+    image:"https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHF2NWJ0eXAwbmxlMnZraWs1MDAzdHpicjkydjVyNWdhZ2ZycW96aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fXbq46ZJEVvKqyy8vj/giphy.gif",
+    path:"Music/Diamond Eyes - Everything Melodic Dubstep NCS - Copyright Free Music.mp3"
   }
 ];
 //
@@ -696,3 +711,217 @@ renderFrame();
 chattable.initialize ({
   stylesheet: "chattable.css"
 })
+
+//game functions
+
+let board;
+let boardWidth = 340;
+let boardHeight = 520;
+let context;
+
+// Pinkie Pie 
+let pinkieWidth = 58;
+let pinkieHeight = 58;
+let pinkieX = boardWidth/2 - pinkieWidth/2;
+let pinkieY = boardHeight*7/8 - pinkieHeight;
+let pinkieRightImg;
+let pinkieLeftImg;
+
+let pinkie ={
+  img : null,
+  x : pinkieX,
+  y : pinkieY,
+  width : pinkieWidth,
+  height : pinkieHeight,
+}
+
+//game physics
+let velocityX =0;
+let velocityY =0;
+let initialVelocityY = -6;
+let gravity = 0.27;
+
+//platforms 
+let platformArray = [];
+let platformWidth = 72;
+let platformHeight = 18;
+let platformImg;
+
+// score 
+let score =0;
+let maxScore = 0;
+let gameOver = false;
+
+// exp 
+let gameInitialized = false;
+
+document.getElementById("StartGame").addEventListener("click",openGame); 
+
+function openGame() { 
+    if (gameInitialized) return;
+    gameInitialized = true;
+  board = document.getElementById("board");
+  board.height = boardHeight;
+  board.width = boardWidth;
+  context = board.getContext("2d");
+
+// context.fillStyle = "green";
+// context.fillRect(pinkie.x,pinkie.y,pinkie.width,pinkie.height);
+
+pinkieRightImg = new Image();
+pinkieRightImg.src = "Resource & Stuff/pinkie right.png"
+pinkie.img = pinkieRightImg;
+pinkieRightImg.onload = function() {
+  context.drawImage(pinkie.img,pinkie.x,pinkie.y,pinkie.width,pinkie.height);
+}
+
+pinkieLeftImg = new Image();
+pinkieLeftImg.src = "Resource & Stuff/pinkie left.png"
+
+platformImg = new Image();
+platformImg.src = "Resource & Stuff/cloud platform.png"
+
+velocityY = initialVelocityY;
+placePlatforms();
+requestAnimationFrame(update);
+document.addEventListener("keydown", movePinkie );
+}
+
+function update() {
+  requestAnimationFrame(update);
+  if (gameOver)  {
+    return;
+  }
+  context.clearRect(0,0,board.width,board.height);
+  // pinkie
+  pinkie.x += velocityX;
+  if(pinkie.x > boardWidth) {
+    pinkie.x = 0 ;
+  }
+  else if (pinkie.x + pinkie.width < 0) {
+    pinkie.x = boardWidth;
+  }
+
+  velocityY += gravity;
+  pinkie.y += velocityY;
+  if (pinkie.y > board.height) {
+    gameOver = true;
+  }
+  context.drawImage(pinkie.img,pinkie.x,pinkie.y,pinkie.width,pinkie.height);
+  
+  //platforms
+  for (let i = 0; i < platformArray.length; i++) {
+    let platform = platformArray[i];
+    if (velocityY < 0 && pinkie.y < boardHeight*3/4) {
+      platform.y -= initialVelocityY ;
+    }
+    if (detectCollision(pinkie,platform)&& velocityY >= 0) {
+      velocityY = initialVelocityY;
+    }
+    context.drawImage(platform.img, platform.x, platform.y, platform.width, platform.height);
+  }
+
+  // clear plarform and add new platform 
+  while (platformArray.length > 0 && platformArray[0].y >= boardHeight) {
+    platformArray.shift();
+    newPlatform();
+  }
+
+  // score 
+  updateScore();
+  context.fillStyle ="black";
+  context.font = "16px sans-serif";
+  context.fillText(score, 5 ,20);
+
+  if (gameOver) {
+    context.fillText("Game Over :o press 'space' to restart" , boardWidth/7, boardHeight*7/8);
+  }
+  
+}
+
+function movePinkie(e) {
+  if (e.code == "ArrowRight" || e.code == "KeyD") {//move right
+  velocityX = 2;
+  pinkie.img = pinkieRightImg;
+}
+else if 
+(e.code == "ArrowLeft" || e.code == "KeyA") {// move left
+velocityX = -2;
+pinkie.img = pinkieLeftImg;
+}
+else if (e.code == "Space" && gameOver) {
+  // reset
+  pinkie ={
+  img : pinkieRightImg,
+  x : pinkieX,
+  y : pinkieY,
+  width : pinkieWidth,
+  height : pinkieHeight,
+}
+velocityX = 0;
+velocityY = initialVelocityY;
+score = 0;
+maxScore = 0;
+gameOver = false;
+placePlatforms();
+}
+}
+
+function placePlatforms () {
+ platformArray = [];
+ let platform = {
+  img : platformImg,
+  x : boardWidth/2,
+  y : boardHeight - 50,
+  width : platformWidth,
+  height : platformHeight
+ }
+
+platformArray.push(platform);
+
+for (let i  = 0; i <6; i++) {
+  let randomX = Math.floor(Math.random() * boardWidth*3/4); //(0-1) * boardWidth*3/4
+   let platform = {
+  img : platformImg,
+  x : randomX,
+  y : boardHeight - 75*i - 150,
+  width : platformWidth,
+  height : platformHeight
+ }
+
+platformArray.push(platform);
+}
+}
+
+function newPlatform() {
+let randomX = Math.floor(Math.random() * boardWidth*3/4); //(0-1) * boardWidth*3/4
+   let platform = {
+  img : platformImg,
+  x : randomX,
+  y : -platformHeight,
+  width : platformWidth,
+  height : platformHeight
+ }
+
+platformArray.push(platform);
+}
+
+function detectCollision(a,b) {
+  return a.x <b.x + b.width &&
+         a.x + a.width > b.x &&
+         a.y < b.y + b.height &&
+         a.y + a.height > b.y;
+}
+
+function updateScore() {
+  let points = Math.floor(50*Math.random());
+  if (velocityY < 0) {
+    maxScore += points;
+    if (score < maxScore) {
+      score = maxScore;
+    }
+  }
+  else if (velocityY >= 0) {
+    maxScore -= points;
+  }
+}

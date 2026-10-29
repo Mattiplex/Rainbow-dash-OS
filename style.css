@@ -770,7 +770,7 @@ i.fa-pause,
 }
 
 .gameOpen {
-background-color:rgba(135,206,250,0.85);
+background-color:#fcbacb;
   height:fit-content;
   width:fit-content;
   margin-top:-10px;
@@ -779,11 +779,11 @@ background-color:rgba(135,206,250,0.85);
 
 .gameIcon {
   text-align:center;
-  color:rgba(250,245,171)
+  color:#fc46aa;
 }
 
-.dashie{
-  height:105px;
+.pinkie{
+  height:115px;
   width:120px;
   padding:5px 5px 0px 5px;
 }
@@ -796,15 +796,85 @@ background-color:rgba(135,206,250,0.85);
 
 
 .gamewindows {
-  background-image:url("construction.png");
-  background-size:cover;
   display:none;
   position:absolute;
-  width:620px;
+  width:580px;
   height:550px;
   top:95px;
   left:300px;
   border-radius:20px;
   padding:5px;
+  background-color:#fcbacb
 }
 
+#board {
+  background-image:url("Resource & Stuff/game background.png");
+  background-size:cover;
+  height:520px;
+  width:340px;
+}
+
+#Startgame {
+background-color: #fa86c4;
+color: black;
+font-family:winkle;
+position: absolute;
+left: 380px;
+top: 305px;
+border-radius:20px;
+font-size: x-large;
+}
+
+.altgame {
+  background-color: #fa86c4;
+  color: black;
+  font-family:winkle;
+  position: absolute;
+  left: 380px;
+  top: 340px;
+  border-radius:20px;
+  font-size: x-large;
+}
+
+.gamedesc {
+color:black;
+font-family:winkle;
+font-size: large;
+position:absolute;
+left:380px;
+top:170px;
+}
+
+.gamedesc1 {
+color:black;
+font-family:winkle;
+font-size:large;
+position:absolute;
+left:380px;
+top:250px;
+}
+
+.gamedesc2 {
+color:black;
+font-family:winkle;
+font-size:large;
+position:absolute;
+left:380px;
+top:270px;
+}
+
+.copterpie {
+  position:absolute;
+  height: 160px;
+  width:160px;
+  left:400px;
+  top:10px;
+}
+
+.challenge {
+ position: absolute;
+ left:390px;
+ bottom:10px;
+ height:180px;
+ width:180px;
+}
