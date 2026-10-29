@@ -512,14 +512,14 @@ let track_list = [
     path:"vim - No1.mp3"
   },
   {
-    name:"Donuts",
+    name:"Donuts - NCS",
     artist:"2SCOOPS",
     image:"https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjM2ODltbnY0dWt4OWJzd3A2cnU5NWRyamJibW9hdWQycWttcDZ6dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/i5Lr0JcMsxPTzrNGPP/giphy.gif",
     path:"Music/2SCOOPS - Donuts [NCS Release].mp3"
   },
   {
     name:"Everything",
-    artist:"Diamond Eyes",
+    artist:"Diamond Eyes - NCS ",
     image:"https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHF2NWJ0eXAwbmxlMnZraWs1MDAzdHpicjkydjVyNWdhZ2ZycW96aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fXbq46ZJEVvKqyy8vj/giphy.gif",
     path:"Music/Diamond Eyes - Everything Melodic Dubstep NCS - Copyright Free Music.mp3"
   }
@@ -769,17 +769,17 @@ function openGame() {
 // context.fillRect(pinkie.x,pinkie.y,pinkie.width,pinkie.height);
 
 pinkieRightImg = new Image();
-pinkieRightImg.src = "Resources & Stuff/pinkie right.png"
+pinkieRightImg.src ="Resources & Stuff/pinkie right.png"
 pinkie.img = pinkieRightImg;
 pinkieRightImg.onload = function() {
   context.drawImage(pinkie.img,pinkie.x,pinkie.y,pinkie.width,pinkie.height);
 }
 
 pinkieLeftImg = new Image();
-pinkieLeftImg.src = "Resources & Stuff/pinkie left.png"
+pinkieLeftImg.src ="Resources & Stuff/pinkie left.png"
 
 platformImg = new Image();
-platformImg.src = "Resources & Stuff/cloud platform.png"
+platformImg.src ="Resources & Stuff/cloud platform.png"
 
 velocityY = initialVelocityY;
 placePlatforms();
