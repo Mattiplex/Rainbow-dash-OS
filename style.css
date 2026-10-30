@@ -903,14 +903,14 @@ background-color:#FFFF8F;
  left:20px;
  top:100px;
  pointer-events:none;
- padding:5px;
+ padding:10px;
  border-radius:20px;
 }
 
 .scrollbox {
   overflow-y: auto;
   pointer-events:auto;
-  width:150px;
+  width:130px;
   height:620px;
 }
 
@@ -919,13 +919,24 @@ background-color:#FFFF8F;
   background-size:cover;
   display:none;
   position:absolute;
-  width:580px;
+  width:620px;
   height:550px;
   top:95px;
   left:300px;
   border-radius:20px;
   padding:5px;
  }
+
+   .scrollbox::-webkit-scrollbar {
+      width: 0;
+      /* remove scrollbar space */
+      background: transparent;
+      /* to make scrollbar invisible */
+    }
+
+    .scrollbox::-webkit-scrollbar-thumb {
+      background: transparent;
+    }
 
 
 
