@@ -12,6 +12,7 @@ dragElement(document.getElementById("noteswindows"));
 dragElement(document.getElementById("musicWindows"));
 dragElement(document.getElementById("chatWindows"));
 dragElement(document.getElementById("gameWindows"));
+dragElement(document.getElementById("galleryWindows"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -140,6 +141,18 @@ GameOpen.addEventListener("click",function(){
 
 GameClose.addEventListener("click",function(){
   closeWindow(GameWindows)
+})
+
+var GalleryWindows = document.querySelector("#galleryWindows")
+var GalleryOpen = document.querySelector("#galleryOpen")
+var GalleryClose = document.querySelector("#galleryClose")
+
+GalleryOpen.addEventListener("click",function(){
+ openWindow(GalleryWindows)
+})
+
+GalleryClose.addEventListener("click",function(){
+  closeWindow(GalleryWindows)
 })
 
 var selectedIcon = undefined

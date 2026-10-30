@@ -739,12 +739,6 @@ i.fa-pause,
   color:rgba(250,245,171)
 }
 
-.game {
-  height:105px;
-  width:120px;
-  padding:5px 5px 0px 5px;
-}
-
 .chatIconText {
   font-family:'gorditas';
   margin-top:1px;
@@ -877,3 +871,61 @@ top:270px;
  height:180px;
  width:180px;
 }
+
+.galleryOpen {
+margin-top:10px;
+border-radius:20px;
+height: fit-content;
+width: fit-content;
+background-color:#FFFF8F;
+}
+
+.galleryIcon {
+ text-align:center;
+ color: #fcbacb;
+}
+
+.galleryIconText {
+  font-family:'gorditas';
+  margin-top:1px;
+  height:25px;
+}
+
+.fluttershy {
+ height:105px;
+ width:120px;
+ padding:5px 5px 0px 5px;
+}
+
+.appcontainer {
+ background-color:rgba(255,250,120,0.75);
+ position: absolute;
+ left:20px;
+ top:100px;
+ pointer-events:none;
+ padding:5px;
+ border-radius:20px;
+}
+
+.scrollbox {
+  overflow-y: auto;
+  pointer-events:auto;
+  width:150px;
+  height:620px;
+}
+
+.galleryWindows {
+  background-image:url("Resources & Stuff/construction.png");
+  background-size:cover;
+  display:none;
+  position:absolute;
+  width:580px;
+  height:550px;
+  top:95px;
+  left:300px;
+  border-radius:20px;
+  padding:5px;
+ }
+
+
+
