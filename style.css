@@ -910,7 +910,7 @@ background-color:#FFFF8F;
 .scrollbox {
   overflow-y: auto;
   pointer-events:auto;
-  width:130px;
+  width:145px;
   height:620px;
 }
 
