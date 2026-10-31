@@ -5,7 +5,7 @@ src: url(https://dl.dropbox.com/s/8p8mi5uzbekohv7/Starborn.ttf);
 
 @font-face {
   font-family:futurefont;
-  src :url(futurefont.otf)
+  src :url("Resources & Stuff/futurefont.otf")
 }
 
 @font-face {
@@ -353,7 +353,7 @@ font-family:starborn;
 
 .empty-state {
 background-color:pink;
-background-image:url("blankState.png");
+background-image:url("Resources & Stuff/blankState.png");
 background-size:cover;
 text-align:center;
 width:500px;
@@ -395,7 +395,7 @@ font-family:starborn;
 }
 
 .note-card {
-background-image:url("noteBCG.png");
+background-image:url("Resources & Stuff/noteBCG.png");
 background-size:cover;
 min-width:40px;
 max-width:140px;
@@ -449,7 +449,7 @@ border-radius:20px;
 }
 
 .rollingtextquote {
-  background-image:url("quote.png");
+  background-image:url("Resources & Stuff/quote.png");
   background-size:270px;
   padding-left:20px;
   padding-right:20px;
@@ -1059,8 +1059,8 @@ height:115px;
   position:absolute;
   width:1080px;
   height:550px;
-  top:95px;
-  left:320px;
+  top:135px;
+  left:250px;
   border-radius:20px;
   padding:5px;
   background-color:rgb(234, 238, 240);
