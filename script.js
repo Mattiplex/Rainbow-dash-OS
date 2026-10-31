@@ -13,6 +13,7 @@ dragElement(document.getElementById("musicWindows"));
 dragElement(document.getElementById("chatWindows"));
 dragElement(document.getElementById("gameWindows"));
 dragElement(document.getElementById("galleryWindows"));
+dragElement(document.getElementById("newsWindows"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -154,6 +155,18 @@ GalleryOpen.addEventListener("click",function(){
 
 GalleryClose.addEventListener("click",function(){
   closeWindow(GalleryWindows)
+})
+
+var NewsWindows =document.querySelector("#newsWindows")
+var NewsOpen = document.querySelector("#newsOpen")
+var NewsClose = document.querySelector("#newsClose")
+
+NewsOpen.addEventListener("click",function(){
+  openWindow(NewsWindows)
+})
+
+NewsClose.addEventListener("click",function(){
+ closeWindow(NewsWindows)
 })
 
 var selectedIcon = undefined
@@ -498,32 +511,32 @@ let track_list = [
 	{
 		name: "Nyan Cat [original]",
 		artist: "PRguitarman, Daniwell",
-		image:"https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGg3emlmOWs4djVxaHBucnBwZGxud3ZnaG5seW0zbG5pNGxuZnhxeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BSx6mzbW1ew7K/giphy.gif",
-		path: "Nyan Cat [original].mp3" 
+		image:"Music/https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGg3emlmOWs4djVxaHBucnBwZGxud3ZnaG5seW0zbG5pNGxuZnhxeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BSx6mzbW1ew7K/giphy.gif",
+		path: "Music/Nyan Cat [original].mp3" 
 	},
 	{
 		name: "Blue dream",
 		artist: "Cheel",
 		image:"https://cdn-images.dzcdn.net/images/cover/65626324e93cc9d56070464d230aaf8e/0x1900-000000-80-0-0.jpg",
-		path: "Cheel - Blue Dream (Original) - Free copyright music.mp3"
+		path: "Music/Cheel - Blue Dream (Original) - Free copyright music.mp3"
 	},
   {
     name: "Smile Song (remix) ",
     artist: "The living Tombstone, Daniel Ingram",
     image: "https://i.ytimg.com/vi/2okSis_wtls/maxresdefault.jpg",
-    path: "TombstoneSmileRemix-Final.mp3"
+    path: "Music/TombstoneSmileRemix-Final.mp3"
   },
   {
     name:"Eurobeat Brony Discord (remix)",
     artist: "The Living TombStone, Odyssey Eurobeat",
     image: "https://images.genius.com/b418baa7b6065a4329bd4c43bee8f7e2.1000x1000x1.png",
-    path:"TombstoneDiscordRemix-Final.mp3"
+    path:"Music/TombstoneDiscordRemix-Final.mp3"
   },
   {
     name:"No aka (just a bit crazy)",
     artist:"V i m!, Edd Gould",
     image:"https://static.wikia.nocookie.net/eddsworld/images/9/9d/AnimationJustABitCrazy3.gif/revision/latest?format=original",
-    path:"vim - No1.mp3"
+    path:"Music/vim - No1.mp3"
   },
   {
     name:"Donuts - NCS",
