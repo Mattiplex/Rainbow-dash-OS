@@ -939,6 +939,14 @@ background-color:#FFFF8F;
   padding:5px;
  }
 
+ .gallerytext {
+  font-family:"gorditas";
+  color:#fcbacb;
+  text-align: center;
+  position: absolute;
+  top:10px;
+  left:170px;
+ }
 
 .slideshowWindow {
   width: 500px;
@@ -1058,7 +1066,7 @@ height:115px;
   display:none;
   position:absolute;
   width:1080px;
-  height:550px;
+  height:510px;
   top:135px;
   left:250px;
   border-radius:20px;
