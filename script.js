@@ -149,6 +149,7 @@ var GalleryClose = document.querySelector("#galleryClose")
 
 GalleryOpen.addEventListener("click",function(){
  openWindow(GalleryWindows)
+ showSlides(window.slideIndex);
 })
 
 GalleryClose.addEventListener("click",function(){
@@ -535,7 +536,14 @@ let track_list = [
     artist:"Diamond Eyes - NCS ",
     image:"https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHF2NWJ0eXAwbmxlMnZraWs1MDAzdHpicjkydjVyNWdhZ2ZycW96aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fXbq46ZJEVvKqyy8vj/giphy.gif",
     path:"Music/Diamond Eyes - Everything Melodic Dubstep NCS - Copyright Free Music.mp3"
+  },
+  {
+    name:"proud to be Brony",
+    artist:"Blackgryph0n",
+    image:"https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/6b67ac3f-1e49-4de0-a78f-eb1df5f41b6a/d46inag-0c61b4f0-51e1-4199-9b89-60539aecbeec.png",
+    path:"Music/Proud to be a Brony [PMV] - BlackGryph0n.mp3"
   }
+
 ];
 //
 //
@@ -936,5 +944,34 @@ function updateScore() {
   }
   else if (velocityY >= 0) {
     maxScore -= points;
+  }
+}
+
+window.slideIndex = 1;
+
+window.plusSlides = function(n) {
+  showSlides(window.slideIndex += n);
+};
+
+window.currentSlide = function(n) {
+  showSlides(window.slideIndex = n);
+};
+
+function showSlides(n) {
+  let slides = document.querySelectorAll("#slideshowWindow .mySlides");
+  let dots = document.querySelectorAll("#slideshowWindow .dot");
+
+  if (slides.length === 0) return;
+
+  if (n > slides.length) window.slideIndex = 1;
+  if (n < 1) window.slideIndex = slides.length;
+
+  slides.forEach(slide => slide.style.display = "none");
+  dots.forEach(dot => dot.classList.remove("active"));
+
+  slides[window.slideIndex - 1].style.display = "block";
+
+  if (dots[window.slideIndex - 1]) {
+    dots[window.slideIndex - 1].classList.add("active");
   }
 }

@@ -54,6 +54,35 @@ font-size: larger;
 word-break: normal ;
 }
 
+.appcontainer {
+ background-color:rgba(255,250,120,0.75);
+ position: absolute;
+ left:20px;
+ top:100px;
+ pointer-events:none;
+ padding:10px;
+ border-radius:20px;
+}
+
+.scrollbox {
+  overflow-y: auto;
+  pointer-events:auto;
+  width:145px;
+  height:620px;
+}
+
+   .scrollbox::-webkit-scrollbar {
+      width: 0;
+      /* remove scrollbar space */
+      background: transparent;
+      /* to make scrollbar invisible */
+    }
+
+    .scrollbox::-webkit-scrollbar-thumb {
+      background: transparent;
+    }
+
+
 #rainbowCursor{
   z-index:9999;
   width:100%;
@@ -897,46 +926,106 @@ background-color:#FFFF8F;
  padding:5px 5px 0px 5px;
 }
 
-.appcontainer {
- background-color:rgba(255,250,120,0.75);
- position: absolute;
- left:20px;
- top:100px;
- pointer-events:none;
- padding:10px;
- border-radius:20px;
-}
-
-.scrollbox {
-  overflow-y: auto;
-  pointer-events:auto;
-  width:145px;
-  height:620px;
-}
-
 .galleryWindows {
   background-image:url("Resources & Stuff/construction.png");
   background-size:cover;
+  background-color: #FFFF8F;
   display:none;
   position:absolute;
-  width:620px;
-  height:550px;
+  width:550px;
+  height:450px;
   top:95px;
   left:300px;
   border-radius:20px;
   padding:5px;
  }
 
-   .scrollbox::-webkit-scrollbar {
-      width: 0;
-      /* remove scrollbar space */
-      background: transparent;
-      /* to make scrollbar invisible */
-    }
 
-    .scrollbox::-webkit-scrollbar-thumb {
-      background: transparent;
-    }
+.slideshowWindow {
+  width: 500px;
+  position: absolute;
+  left:30px;
+  top:60px;
+}
 
+.slideshow-container {
+  width: 100%;
+  position: absolute;
+  margin: auto;
+}
 
+.slideshow-container img {
+  width: 100%;
+  display: block;
+}
 
+.slideshow-container .mySlides {
+  display: none;
+}
+
+.slideshow-container .prev,
+.slideshow-container .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: #FFFF8F;
+  font-weight: bold;
+  transform: translateY(-50%);
+  user-select: none;
+}
+
+.slideshow-container .next {
+  right: 0;
+}
+
+.slideshow-container .prev:hover,
+.slideshow-container .next:hover {
+  background: rgba(252,186,188,0.8);
+border-radius: 90px;
+}
+
+.slideshow-container .text {
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family:"gorditas";
+}
+
+.slideshow-container .text1 {
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-family:"gorditas";
+}
+
+.slideshowWindow .dots {
+  text-align: center;
+}
+
+.slideshowWindow .dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  background: #bbb;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.slideshowWindow .dot.active {
+  background: #717171;
+}
+
+.slideshow-container .fade {
+  animation: slideshowFade 1s;
+}
+
+@keyframes slideshowFade {
+  from { opacity: .4; }
+  to { opacity: 1; }
+}
