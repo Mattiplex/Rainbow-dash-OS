@@ -927,8 +927,6 @@ background-color:#FFFF8F;
 }
 
 .galleryWindows {
-  background-image:url("Resources & Stuff/construction.png");
-  background-size:cover;
   background-color: #FFFF8F;
   display:none;
   position:absolute;
