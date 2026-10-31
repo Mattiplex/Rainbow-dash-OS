@@ -13,6 +13,13 @@ src: url(https://dl.dropbox.com/s/mes7b666uvig5wc/Winkle-Regular.otf);
 font-family: winkle;
 }
 
+html{
+cursor:url("Resources & Stuff/MLP Rainbow Dash Animated Cursor--cursor--SweezyCursors.ani"),auto;
+a, button, input[type="button"], input[type="submit"],
+[onclick], label, select {
+    cursor: url("Resources & Stuff/MLP Rainbow Dash Animated Cursor--pointer--SweezyCursors.cur"), pointer;
+}
+}
 
 #welcomescreen {
   position: absolute;

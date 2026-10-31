@@ -511,7 +511,7 @@ let track_list = [
 	{
 		name: "Nyan Cat [original]",
 		artist: "PRguitarman, Daniwell",
-		image:"Music/https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGg3emlmOWs4djVxaHBucnBwZGxud3ZnaG5seW0zbG5pNGxuZnhxeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BSx6mzbW1ew7K/giphy.gif",
+		image:"https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGg3emlmOWs4djVxaHBucnBwZGxud3ZnaG5seW0zbG5pNGxuZnhxeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BSx6mzbW1ew7K/giphy.gif",
 		path: "Music/Nyan Cat [original].mp3" 
 	},
 	{
