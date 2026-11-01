@@ -1094,6 +1094,5 @@ function typeWriter() {
   // showLine();
 
 //}
-// Start the first dialogue
 showLine();
 //document.querySelector("#welcomeopen").classList.add("app-highlight");
