@@ -988,3 +988,112 @@ function showSlides(n) {
     dots[window.slideIndex - 1].classList.add("active");
   }
 }
+
+const dialogue = [
+    { name: "Rainbow Dash", side: "right", text: "oh hey i never seen you before!" },
+    { name: "Rainbow Dash", side: "right", text: "You must be new here." },
+    { name: "Rainbow Dash", side: "right", text: "come, let the most awesome pony of ponyville show you around!" },
+    { name: "Rainbow Dash", side: "right", text: "this is the welcome screen!, where the dev will add more stuff when he's done slacking off",highlight:"#welcomeopen" },
+    { name: "Rainbow Dash", side: "right", text: "here's the note app , this is where twilight lives, i can never concentrate on her lesson espcially when wonderbolt exists",highlight:"#notesopen" },
+    { name: "Rainbow Dash", side: "right", text: "here's the Music app, DJpon3 rule this scene",highlight:"#musicopen" },
+    { name: "Rainbow Dash", side: "right", text: "here's the global chat, where you can chat with any pony using this OS",highlight:"#chatopen" },
+    { name: "Rainbow Dash", side: "right", text: "here's the game app,can you help pinkie pie reach my party ?, i sure hope so",highlight:"#gameopen" },
+    { name: "Rainbow Dash", side: "right", text: "here's the gallery app, this where some wacky stuff is stored",highlight:"#galleryopen" },
+    { name: "Rainbow Dash", side: "right", text: "here's the news app, you can stay updated on great fan art and official content",highlight:"#newsopen" },
+    { name: "Rainbow Dash", side: "right", text: "well that's about for this introduction" },
+    { name: "Rainbow Dash", side: "right", text: "have fun exploring!" },
+    { name: "Rainbow Dash", side: "right", text: "Rainbow Dash OUT" },
+];
+
+let currentLine = 0;
+let typing = false;
+let fullText = "";
+let charIndex = 0;
+let typingSpeed = 35;
+let typingTimeout;
+
+window.handleClick = handleClick;
+
+function handleClick() {
+
+    if (typing) {
+        clearTimeout(typingTimeout);
+
+        document.getElementById("text").textContent = fullText;
+        typing = false;
+        return;
+    }
+
+    if (currentLine < dialogue.length) {
+        showLine();
+    } else {
+        document.getElementById("introOverlay").classList.add("finished");
+
+        localStorage.setItem("introCompleted", "true");
+    }
+}
+
+window.handleClick = handleClick;
+
+function showLine() {
+    const line = dialogue[currentLine];
+
+    document.getElementById("name").textContent = line.name;
+
+    // Remove previous highlight
+document.querySelectorAll(".app-highlight").forEach(app => {
+    app.classList.remove("app-highlight");
+});
+
+// Apply current highlight
+if (line.highlight) {
+    console.log("Highlighting:", line.highlight);
+
+    const app = document.querySelector(line.highlight);
+
+    if (app) {
+        app.classList.add("app-highlight");
+    } else {
+        console.log("App not found:", line.highlight);
+    }
+}
+
+    // Keep Rainbow Dash visible on the right
+    document.getElementById("charRight").style.opacity = "1";
+
+    fullText = line.text;
+    charIndex = 0;
+
+    document.getElementById("text").textContent = "";
+    typing = true;
+
+    typeWriter();
+
+    currentLine++;
+}
+
+function typeWriter() {
+    if (charIndex < fullText.length) {
+
+        document.getElementById("text").textContent += fullText.charAt(charIndex);
+        charIndex++;
+
+        typingTimeout = setTimeout(typeWriter, typingSpeed);
+
+    } else {
+        typing = false;
+    }
+}
+
+//if (localStorage.getItem("introCompleted") === "true") {
+
+  //  document.getElementById("introOverlay").classList.add("finished");
+
+//} else {
+
+  // showLine();
+
+//}
+// Start the first dialogue
+showLine();
+//document.querySelector("#welcomeopen").classList.add("app-highlight");

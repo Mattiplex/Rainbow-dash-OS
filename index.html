@@ -2,7 +2,7 @@
  <meta charset="UTF-8">
  <title> Rainbow Dash OS</title>
  <script src="https://iframe.chat/scripts/main.min.js"></script>
- <link rel="icon" link="image/png" href="Resources & Stuff/favicon.png">
+<link rel="icon" type="image/png" href="Resources & Stuff/favicon.png">
 </head>
 
 
@@ -12,9 +12,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&display=swap" rel="stylesheet">
-
-
-	
 
 <div id="welcomescreen">
   <img id="welcomeclose" class="closewindow" src="Resources & Stuff/pinkie crossed.png" alt="close button">
@@ -36,7 +33,6 @@
 </div>
 
 
-
  <div id="top"><div id="header"class="header">
 <h2 id="OSname">RainbowDashOS</h2> 
 <h2 id="timeElement" class="timeElement"> </h2>  
@@ -45,7 +41,6 @@
 <div id="rolling">10 Second Flat</div>
 <div class="rollingtextquote"> <a class="link" href="https://github.com/Mattiplex/Rainbow-dash-OS">  @matthewwong12  </a></div>
 </div> </div>
-
 
 <div class="appContainer">
    <div class="scrollbox">
@@ -296,6 +291,22 @@
     </iframe>
 </div>
 </div>
+
+<div class="intro-overlay" id="introOverlay">
+        <div class="game">
+
+            <div class="background"></div>
+
+            <img class="character right" id="charRight" src="Resources & Stuff/storyboard.png"></img>
+
+            <div class="dialogue-box" onclick="handleClick()">
+                <div class="name" id="name"></div>
+                <div class="text" id="text"></div>
+                <div class="hint">Click to continue</div>
+            </div>
+
+        </div>
+    </div>
 
  
  <script src="https://kit.fontawesome.com/f084da5e9f.js" crossorigin="anonymous"></script>

@@ -13,6 +13,103 @@ src: url(https://dl.dropbox.com/s/mes7b666uvig5wc/Winkle-Regular.otf);
 font-family: winkle;
 }
 
+/* Intro overlay */
+.intro-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    overflow: hidden;
+}
+
+/* Game scene */
+.intro-overlay .game {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.intro-overlay .background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Hide intro */
+.intro-overlay.finished {
+    display: none;
+}
+
+.character {
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    height: 360px;
+    background-size: cover;
+    transition: opacity 0.3s ease;
+}
+
+.right {
+    right: 5%;
+}
+
+.dialogue-box {
+    position: absolute;
+    bottom: 0;
+    left: 200px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family:"gorditas";
+}
+
+.name {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family:"gorditas",
+}
+
+.text {
+    font-size: 18px;
+    font-family:"gorditas";
+}
+
+.hint {
+    font-size: 12px;
+    opacity: 0.6;
+    margin-top: 10px;
+}
+
+.app-highlight {
+    position: relative;
+    z-index: 999 !important;
+    animation: storyboardPulse 1.2s ease-in-out infinite !important;
+    will-change: filter;
+    border-radius:20px;
+}
+
+@keyframes storyboardPulse {
+    0% {
+        filter: drop-shadow(0 0 3px rgba(134, 250, 242));
+    }
+
+    50% {
+        filter:
+            drop-shadow(0 0 8px white)
+            drop-shadow(0 0 18px rgba(48, 231, 237))
+            drop-shadow(0 0 30px rgba(0, 166, 215));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 3px #ffe69a);
+    }
+}
+
 #welcomescreen {
   position: absolute;
   z-index: 9;
@@ -26,6 +123,7 @@ font-family: winkle;
   width:450px;
   height: 800px;
   flex-direction:column;
+  display:none;
 }
 
 #welcomescreenheader {
