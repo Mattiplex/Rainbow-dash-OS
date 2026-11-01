@@ -416,7 +416,7 @@ window.addEventListener('touchstart', relay, { passive: true });
 
 //rolling text effect
 
-var text=Array("20% cooler", "in 10 seconds flat","Rainbow Dash is da best Pony !", "    what's up , Brony ?", "This Site needs to be 20% cooler","try equestria girls","try neverland OS","damn good of an OS"); // replace this with an array of your own text
+var text=Array("20% cooler ...","in 10 seconds flat","Rainbow Dash is da best Pony!","what's up , Brony ?","This Site needs to be 20% cooler","try equestria girls ","try neverland OS","@253_Mathilde_IYKYK the Goat"); // replace this with an array of your own text
 var delay=8; // seconds between each new text item
 var speed1=80; // speed of the scroll
  
@@ -1098,15 +1098,15 @@ function typeWriter() {
     }
 }
 
-//if (localStorage.getItem("introCompleted") === "true") {
+if (localStorage.getItem("introCompleted") === "true") {
 
- //   document.getElementById("introOverlay").classList.add("finished");
+    document.getElementById("introOverlay").classList.add("finished");
 
-//} else {
+} else {
 
- //  showLine();
+  showLine();
 
-//}
+}
 
-showLine();
+
 //document.querySelector("#welcomeopen").classList.add("app-highlight");

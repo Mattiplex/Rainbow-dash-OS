@@ -538,11 +538,10 @@ border-radius:20px;
 #rolling {
  background-color: rgba(135,206,250,0.95);
  border-radius: 5px;
- width:290px; 
- font-family:starborn;
- margin-top:50px;
- margin-left:680px;
- padding-left:20px;
+ width:300px; 
+ position:relative;
+ left:620px;
+ top:50px;
  height: 20px;
  font-family:starborn;
  font-size:small;
@@ -551,6 +550,7 @@ border-radius:20px;
 
 .rollingtextquote {
   background-image:url("Resources & Stuff/quote.png");
+  background-color:white;
   background-size:270px;
   padding-left:20px;
   padding-right:20px;
@@ -560,8 +560,8 @@ border-radius:20px;
   text-align:center;
   align-content:center;
   position:absolute; 
-  margin-left:1039px;
-  margin-top:5px;
+  top:5px;
+  left:980px;
   z-index:20px;
 } 
 
