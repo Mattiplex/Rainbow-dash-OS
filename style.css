@@ -88,25 +88,26 @@ font-family: winkle;
 .app-highlight {
     position: relative;
     z-index: 999 !important;
+    border-radius: 20px;
+    outline: 2px solid #7df9ff;
+    outline-offset: 3px;
     animation: storyboardPulse 1.2s ease-in-out infinite !important;
-    will-change: filter;
-    border-radius:20px;
 }
 
 @keyframes storyboardPulse {
-    0% {
-        filter: drop-shadow(0 0 3px rgba(134, 250, 242));
+    0%, 100% {
+        box-shadow:
+            0 0 8px 4px rgba(0, 255, 255, 0.7),
+            0 0 18px 8px rgba(0, 191, 255, 0.6),
+            0 0 30px 12px rgba(0, 140, 255, 0.4);
     }
 
     50% {
-        filter:
-            drop-shadow(0 0 8px white)
-            drop-shadow(0 0 18px rgba(48, 231, 237))
-            drop-shadow(0 0 30px rgba(0, 166, 215));
-    }
-
-    100% {
-        filter: drop-shadow(0 0 3px #ffe69a);
+        box-shadow:
+            0 0 12px 6px rgba(255, 255, 255, 0.95),
+            0 0 25px 12px rgba(0, 255, 255, 0.95),
+            0 0 45px 18px rgba(0, 140, 255, 0.8),
+            0 0 65px 22px rgba(0, 100, 255, 0.5);
     }
 }
 
@@ -151,21 +152,24 @@ font-size: larger;
 word-break: normal ;
 }
 
-.appcontainer {
+.appContainer {
  background-color:rgba(255,250,120,0.75);
  position: absolute;
- left:20px;
+ left:7px;
  top:100px;
+ width:150px;
  pointer-events:none;
  padding:10px;
  border-radius:20px;
 }
 
 .scrollbox {
-  overflow-y: auto;
+  overflow:scroll;
   pointer-events:auto;
-  width:145px;
+  width:155px;
   height:620px;
+  padding:10px;
+  box-sizing:border-box;
 }
 
    .scrollbox::-webkit-scrollbar {
@@ -1000,7 +1004,7 @@ top:270px;
 }
 
 .galleryOpen {
-margin-top:10px;
+margin-top:-10px;
 border-radius:20px;
 height: fit-content;
 width: fit-content;
